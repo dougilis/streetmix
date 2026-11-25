@@ -1,0 +1,2603 @@
+[
+ {
+  "name": "sidewalk-anchor-empty",
+  "category": "placeholder",
+  "file": null,
+  "sheet": "tiles-1.png",
+  "px": 0,
+  "py": 0,
+  "pw": 96,
+  "ph": 24,
+  "feet": [
+   4.0,
+   1.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk:dense:center",
+   "sidewalk:empty:center",
+   "sidewalk:normal:center",
+   "sidewalk:sparse:center"
+  ],
+  "note": "transparent placeholder, nothing to draw"
+ },
+ {
+  "name": "wayfinding-sign-large",
+  "category": "furniture",
+  "file": "original/furniture/wayfinding-sign-large.png",
+  "sheet": "tiles-1.png",
+  "px": 0,
+  "py": 0,
+  "pw": 96,
+  "ph": 264,
+  "feet": [
+   4.0,
+   11.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-wayfinding:large:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-rear",
+  "category": "vehicles",
+  "file": "original/vehicles/car-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 0,
+  "py": 768,
+  "pw": 192,
+  "ph": 192,
+  "feet": [
+   8.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "drive-lane:outbound|car:center",
+   "drive-lane:outbound|sharrow:center",
+   "turn-lane:outbound|straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-rear-parked",
+  "category": "vehicles",
+  "file": "original/vehicles/car-rear-parked.png",
+  "sheet": "tiles-1.png",
+  "px": 24,
+  "py": 768,
+  "pw": 144,
+  "ph": 192,
+  "feet": [
+   6.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:outbound|left:left",
+   "parking-lane:outbound|right:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-rear-signal-left",
+  "category": "vehicles",
+  "file": "original/vehicles/car-rear-signal-left.png",
+  "sheet": "tiles-1.png",
+  "px": 24,
+  "py": 1872,
+  "pw": 192,
+  "ph": 144,
+  "feet": [
+   8.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|both:center",
+   "turn-lane:outbound|left-straight:center",
+   "turn-lane:outbound|left:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "wayfinding-sign-medium",
+  "category": "furniture",
+  "file": "original/furniture/wayfinding-sign-medium.png",
+  "sheet": "tiles-1.png",
+  "px": 120,
+  "py": 0,
+  "pw": 72,
+  "ph": 264,
+  "feet": [
+   3.0,
+   11.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-wayfinding:medium:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "cyclist-a-front",
+  "category": "cyclists",
+  "file": "original/cyclists/cyclist-a-front.png",
+  "sheet": "tiles-1.png",
+  "px": 120,
+  "py": 1176,
+  "pw": 72,
+  "ph": 192,
+  "feet": [
+   3.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:inbound|colored:center",
+   "bike-lane:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "cyclist-b-front",
+  "category": "cyclists",
+  "file": "original/cyclists/cyclist-b-front.png",
+  "sheet": "tiles-1.png",
+  "px": 120,
+  "py": 1416,
+  "pw": 72,
+  "ph": 192,
+  "feet": [
+   3.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|shared:center",
+   "drive-lane:inbound|sharrow:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-front",
+  "category": "vehicles",
+  "file": "original/vehicles/car-front.png",
+  "sheet": "tiles-1.png",
+  "px": 192,
+  "py": 768,
+  "pw": 192,
+  "ph": 192,
+  "feet": [
+   8.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "drive-lane:inbound|car:center",
+   "drive-lane:inbound|sharrow:center",
+   "turn-lane:inbound|straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "wayfinding-sign-small",
+  "category": "furniture",
+  "file": "original/furniture/wayfinding-sign-small.png",
+  "sheet": "tiles-1.png",
+  "px": 216,
+  "py": 0,
+  "pw": 48,
+  "ph": 264,
+  "feet": [
+   2.0,
+   11.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-wayfinding:small:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-front-parked",
+  "category": "vehicles",
+  "file": "original/vehicles/car-front-parked.png",
+  "sheet": "tiles-1.png",
+  "px": 216,
+  "py": 768,
+  "pw": 144,
+  "ph": 192,
+  "feet": [
+   6.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:inbound|left:left",
+   "parking-lane:inbound|right:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "cyclist-a-rear",
+  "category": "cyclists",
+  "file": "original/cyclists/cyclist-a-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 216,
+  "py": 1176,
+  "pw": 72,
+  "ph": 192,
+  "feet": [
+   3.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:outbound|colored:center",
+   "bike-lane:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "cyclist-b-rear",
+  "category": "cyclists",
+  "file": "original/cyclists/cyclist-b-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 216,
+  "py": 1416,
+  "pw": 72,
+  "ph": 192,
+  "feet": [
+   3.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:outbound|shared:center",
+   "drive-lane:outbound|sharrow:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-rear-signal-right",
+  "category": "vehicles",
+  "file": "original/vehicles/car-rear-signal-right.png",
+  "sheet": "tiles-1.png",
+  "px": 240,
+  "py": 1872,
+  "pw": 192,
+  "ph": 144,
+  "feet": [
+   8.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|right-straight:center",
+   "turn-lane:outbound|right:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bus-rear-shared-lane",
+  "category": "vehicles",
+  "file": "original/vehicles/bus-rear-shared-lane.png",
+  "sheet": "tiles-1.png",
+  "px": 384,
+  "py": 648,
+  "pw": 288,
+  "ph": 312,
+  "feet": [
+   12.0,
+   13.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:outbound|shared:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bus-rear",
+  "category": "vehicles",
+  "file": "original/vehicles/bus-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 384,
+  "py": 672,
+  "pw": 288,
+  "ph": 264,
+  "feet": [
+   12.0,
+   11.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:outbound|colored:center",
+   "bus-lane:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "light-rail-front",
+  "category": "vehicles",
+  "file": "original/vehicles/light-rail-front.png",
+  "sheet": "tiles-1.png",
+  "px": 408,
+  "py": 960,
+  "pw": 240,
+  "ph": 408,
+  "feet": [
+   10.0,
+   17.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:inbound|colored:center",
+   "light-rail:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "truck-front",
+  "category": "vehicles",
+  "file": "original/vehicles/truck-front.png",
+  "sheet": "tiles-1.png",
+  "px": 408,
+  "py": 1536,
+  "pw": 240,
+  "ph": 288,
+  "feet": [
+   10.0,
+   12.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "drive-lane:inbound|truck:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "rail-tracks-dark",
+  "category": "markings",
+  "file": "original/markings/rail-tracks-dark.png",
+  "sheet": "tiles-1.png",
+  "px": 432,
+  "py": 1368,
+  "pw": 192,
+  "ph": 120,
+  "feet": [
+   8.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:inbound|colored:center",
+   "light-rail:inbound|regular:center",
+   "light-rail:outbound|colored:center",
+   "light-rail:outbound|regular:center",
+   "streetcar:inbound|colored:center",
+   "streetcar:outbound|colored:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-front-signal-left",
+  "category": "vehicles",
+  "file": "original/vehicles/car-front-signal-left.png",
+  "sheet": "tiles-1.png",
+  "px": 480,
+  "py": 1872,
+  "pw": 192,
+  "ph": 144,
+  "feet": [
+   8.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|both:center",
+   "turn-lane:inbound|left-straight:center",
+   "turn-lane:inbound|left:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "light-rail-rear",
+  "category": "vehicles",
+  "file": "original/vehicles/light-rail-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 648,
+  "py": 960,
+  "pw": 240,
+  "ph": 408,
+  "feet": [
+   10.0,
+   17.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:outbound|colored:center",
+   "light-rail:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-grey-wide",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-grey-wide.png",
+  "sheet": "tiles-1.png",
+  "px": 672,
+  "py": 360,
+  "pw": 192,
+  "ph": 120,
+  "feet": [
+   8.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:inbound|colored:center",
+   "light-rail:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bus-front-shared-lane",
+  "category": "vehicles",
+  "file": "original/vehicles/bus-front-shared-lane.png",
+  "sheet": "tiles-1.png",
+  "px": 672,
+  "py": 648,
+  "pw": 264,
+  "ph": 312,
+  "feet": [
+   11.0,
+   13.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|shared:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bus-front",
+  "category": "vehicles",
+  "file": "original/vehicles/bus-front.png",
+  "sheet": "tiles-1.png",
+  "px": 672,
+  "py": 672,
+  "pw": 264,
+  "ph": 264,
+  "feet": [
+   11.0,
+   11.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|colored:center",
+   "bus-lane:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "rail-tracks-light",
+  "category": "markings",
+  "file": "original/markings/rail-tracks-light.png",
+  "sheet": "tiles-1.png",
+  "px": 672,
+  "py": 1368,
+  "pw": 192,
+  "ph": 120,
+  "feet": [
+   8.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "streetcar:inbound|regular:center",
+   "streetcar:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-grey-offset",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-grey-offset.png",
+  "sheet": "tiles-1.png",
+  "px": 696,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "streetcar:inbound|colored:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "truck-rear",
+  "category": "vehicles",
+  "file": "original/vehicles/truck-rear.png",
+  "sheet": "tiles-1.png",
+  "px": 696,
+  "py": 1536,
+  "pw": 216,
+  "ph": 288,
+  "feet": [
+   9.0,
+   12.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "drive-lane:outbound|truck:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-front-signal-right",
+  "category": "vehicles",
+  "file": "original/vehicles/car-front-signal-right.png",
+  "sheet": "tiles-1.png",
+  "px": 696,
+  "py": 1872,
+  "pw": 192,
+  "ph": 144,
+  "feet": [
+   8.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|right-straight:center",
+   "turn-lane:inbound|right:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-straight.png",
+  "sheet": "tiles-1.png",
+  "px": 720,
+  "py": 120,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-grey",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-grey.png",
+  "sheet": "tiles-1.png",
+  "px": 720,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:inbound|colored:center",
+   "bike-lane:inbound|regular:center",
+   "bus-lane:inbound|colored:center",
+   "bus-lane:inbound|regular:center",
+   "drive-lane:inbound|car:center",
+   "drive-lane:inbound|truck:center",
+   "streetcar:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-grey-wide",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-grey-wide.png",
+  "sheet": "tiles-1.png",
+  "px": 888,
+  "py": 360,
+  "pw": 192,
+  "ph": 120,
+  "feet": [
+   8.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:outbound|colored:center",
+   "light-rail:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-side-angled-left",
+  "category": "vehicles",
+  "file": "original/vehicles/car-side-angled-left.png",
+  "sheet": "tiles-1.png",
+  "px": 912,
+  "py": 1872,
+  "pw": 336,
+  "ph": 144,
+  "feet": [
+   14.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:sideways|left:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-straight.png",
+  "sheet": "tiles-1.png",
+  "px": 936,
+  "py": 120,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-grey",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-grey.png",
+  "sheet": "tiles-1.png",
+  "px": 936,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:outbound|colored:center",
+   "bike-lane:outbound|regular:center",
+   "bus-lane:outbound|colored:center",
+   "bus-lane:outbound|regular:center",
+   "drive-lane:outbound|car:center",
+   "drive-lane:outbound|truck:center",
+   "streetcar:outbound|colored:center",
+   "streetcar:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-modern-both",
+  "category": "furniture",
+  "file": "original/furniture/lamp-modern-both.png",
+  "sheet": "tiles-1.png",
+  "px": 936,
+  "py": 576,
+  "pw": 384,
+  "ph": 744,
+  "feet": [
+   16.0,
+   31.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:both|modern:center",
+   "sidewalk-lamp:both|pride:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "tree-big",
+  "category": "nature",
+  "file": "original/nature/tree-big.png",
+  "sheet": "tiles-1.png",
+  "px": 960,
+  "py": 1344,
+  "pw": 216,
+  "ph": 504,
+  "feet": [
+   9.0,
+   21.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:big-tree:center",
+   "sidewalk-tree:big:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-stall-line-left",
+  "category": "markings",
+  "file": "original/markings/parking-stall-line-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1104,
+  "py": 360,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:inbound|right:left",
+   "parking-lane:outbound|right:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-parallel-left",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-parallel-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1272,
+  "py": 288,
+  "pw": 72,
+  "ph": 144,
+  "feet": [
+   3.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:left|sidewalk-parallel:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "car-side-angled-right",
+  "category": "vehicles",
+  "file": "original/vehicles/car-side-angled-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1296,
+  "py": 1872,
+  "pw": 336,
+  "ph": 144,
+  "feet": [
+   14.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:sideways|right:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-modern-right",
+  "category": "furniture",
+  "file": "original/furniture/lamp-modern-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1344,
+  "py": 576,
+  "pw": 288,
+  "ph": 744,
+  "feet": [
+   12.0,
+   31.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:right|modern:right",
+   "sidewalk-lamp:right|pride:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-parallel-right",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-parallel-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1368,
+  "py": 288,
+  "pw": 72,
+  "ph": 144,
+  "feet": [
+   3.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:right|sidewalk-parallel:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-sidewalk-right",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-sidewalk-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1464,
+  "py": 48,
+  "pw": 144,
+  "ph": 144,
+  "feet": [
+   6.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:right|sidewalk:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-road-right",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-road-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1464,
+  "py": 288,
+  "pw": 144,
+  "ph": 168,
+  "feet": [
+   6.0,
+   7.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:right|road:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-sidewalk-left",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-sidewalk-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1608,
+  "py": 48,
+  "pw": 144,
+  "ph": 144,
+  "feet": [
+   6.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:left|sidewalk:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bike-rack-road-left",
+  "category": "furniture",
+  "file": "original/furniture/bike-rack-road-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1608,
+  "py": 288,
+  "pw": 144,
+  "ph": 168,
+  "feet": [
+   6.0,
+   7.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bike-rack:left|road:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-modern-left",
+  "category": "furniture",
+  "file": "original/furniture/lamp-modern-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1680,
+  "py": 576,
+  "pw": 288,
+  "ph": 744,
+  "feet": [
+   12.0,
+   31.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:left|modern:left",
+   "sidewalk-lamp:left|pride:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bench-center",
+  "category": "furniture",
+  "file": "original/furniture/bench-center.png",
+  "sheet": "tiles-1.png",
+  "px": 1776,
+  "py": 48,
+  "pw": 72,
+  "ph": 144,
+  "feet": [
+   3.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bench:center:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bench-right",
+  "category": "furniture",
+  "file": "original/furniture/bench-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1872,
+  "py": 48,
+  "pw": 72,
+  "ph": 144,
+  "feet": [
+   3.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bench:right:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bench-left",
+  "category": "furniture",
+  "file": "original/furniture/bench-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1944,
+  "py": 48,
+  "pw": 72,
+  "ph": 144,
+  "feet": [
+   3.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-bench:left:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "train-inception-secret",
+  "category": "vehicles",
+  "file": "original/vehicles/train-inception-secret.png",
+  "sheet": "tiles-1.png",
+  "px": 1968,
+  "py": 1632,
+  "pw": 336,
+  "ph": 384,
+  "feet": [
+   14.0,
+   16.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "train::center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-right-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-right-straight.png",
+  "sheet": "tiles-1.png",
+  "px": 1992,
+  "py": 240,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|right-straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-right",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1992,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|right:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "tree-palm",
+  "category": "nature",
+  "file": "original/nature/tree-palm.png",
+  "sheet": "tiles-1.png",
+  "px": 1992,
+  "py": 576,
+  "pw": 336,
+  "ph": 744,
+  "feet": [
+   14.0,
+   31.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:palm-tree:center",
+   "sidewalk-tree:palm-tree:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-bike-lane-green",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-bike-lane-green.png",
+  "sheet": "tiles-2.png",
+  "px": 96,
+  "py": 1512,
+  "pw": 192,
+  "ph": 120,
+  "feet": [
+   8.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:inbound|colored:repeat",
+   "bike-lane:outbound|colored:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-divider-median",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-divider-median.png",
+  "sheet": "tiles-2.png",
+  "px": 336,
+  "py": 1032,
+  "pw": 240,
+  "ph": 144,
+  "feet": [
+   10.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:median:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-asphalt",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-asphalt.png",
+  "sheet": "tiles-2.png",
+  "px": 336,
+  "py": 1272,
+  "pw": 240,
+  "ph": 120,
+  "feet": [
+   10.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bike-lane:inbound|regular:repeat",
+   "bike-lane:outbound|regular:repeat",
+   "bus-lane:inbound|regular:repeat",
+   "bus-lane:inbound|shared:repeat",
+   "bus-lane:outbound|regular:repeat",
+   "bus-lane:outbound|shared:repeat",
+   "divider:bollard:repeat",
+   "divider:dome:repeat",
+   "divider:planter-box:repeat",
+   "divider:striped-buffer:repeat",
+   "drive-lane:inbound|car:repeat",
+   "drive-lane:inbound|sharrow:repeat",
+   "drive-lane:inbound|truck:repeat",
+   "drive-lane:outbound|car:repeat",
+   "drive-lane:outbound|sharrow:repeat",
+   "drive-lane:outbound|truck:repeat",
+   "parking-lane:inbound|left:repeat",
+   "parking-lane:inbound|right:repeat",
+   "parking-lane:outbound|left:repeat",
+   "parking-lane:outbound|right:repeat",
+   "parking-lane:sideways|left:repeat",
+   "parking-lane:sideways|right:repeat",
+   "parklet:left:repeat",
+   "parklet:right:repeat",
+   "sidewalk-bike-rack:left|road:repeat",
+   "sidewalk-bike-rack:right|road:repeat",
+   "streetcar:inbound|regular:repeat",
+   "streetcar:outbound|regular:repeat",
+   "train::repeat",
+   "turn-lane:inbound|both:repeat",
+   "turn-lane:inbound|left-straight:repeat",
+   "turn-lane:inbound|left:repeat",
+   "turn-lane:inbound|right-straight:repeat",
+   "turn-lane:inbound|right:repeat",
+   "turn-lane:inbound|shared:repeat",
+   "turn-lane:inbound|straight:repeat",
+   "turn-lane:outbound|both:repeat",
+   "turn-lane:outbound|left-straight:repeat",
+   "turn-lane:outbound|left:repeat",
+   "turn-lane:outbound|right-straight:repeat",
+   "turn-lane:outbound|right:repeat",
+   "turn-lane:outbound|shared:repeat",
+   "turn-lane:outbound|straight:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-bus-lane-red",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-bus-lane-red.png",
+  "sheet": "tiles-2.png",
+  "px": 336,
+  "py": 1512,
+  "pw": 240,
+  "ph": 120,
+  "feet": [
+   10.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|colored:repeat",
+   "bus-lane:outbound|colored:repeat",
+   "light-rail:inbound|colored:repeat",
+   "light-rail:outbound|colored:repeat",
+   "streetcar:inbound|colored:repeat",
+   "streetcar:outbound|colored:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "sharrow-inbound",
+  "category": "markings",
+  "file": "original/markings/sharrow-inbound.png",
+  "sheet": "tiles-2.png",
+  "px": 408,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|shared:center",
+   "drive-lane:inbound|sharrow:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "sharrow-outbound",
+  "category": "markings",
+  "file": "original/markings/sharrow-outbound.png",
+  "sheet": "tiles-2.png",
+  "px": 528,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:outbound|shared:center",
+   "drive-lane:outbound|sharrow:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parklet-right",
+  "category": "furniture",
+  "file": "original/furniture/parklet-right.png",
+  "sheet": "tiles-2.png",
+  "px": 528,
+  "py": 816,
+  "pw": 192,
+  "ph": 192,
+  "feet": [
+   8.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parklet:right:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-light-rail-grey",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-light-rail-grey.png",
+  "sheet": "tiles-2.png",
+  "px": 624,
+  "py": 1032,
+  "pw": 216,
+  "ph": 120,
+  "feet": [
+   9.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "light-rail:inbound|regular:repeat",
+   "light-rail:outbound|regular:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-sidewalk-concrete",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-sidewalk-concrete.png",
+  "sheet": "tiles-2.png",
+  "px": 624,
+  "py": 1272,
+  "pw": 216,
+  "ph": 120,
+  "feet": [
+   9.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:big-tree:repeat",
+   "divider:bush:repeat",
+   "divider:flowers:repeat",
+   "divider:median:repeat",
+   "divider:palm-tree:repeat",
+   "divider:planting-strip:repeat",
+   "sidewalk-bench:center:repeat",
+   "sidewalk-bench:left:repeat",
+   "sidewalk-bench:right:repeat",
+   "sidewalk-bike-rack:left|sidewalk-parallel:repeat",
+   "sidewalk-bike-rack:left|sidewalk:repeat",
+   "sidewalk-bike-rack:right|sidewalk-parallel:repeat",
+   "sidewalk-bike-rack:right|sidewalk:repeat",
+   "sidewalk-lamp:both|modern:repeat",
+   "sidewalk-lamp:both|pride:repeat",
+   "sidewalk-lamp:both|traditional:repeat",
+   "sidewalk-lamp:left|modern:repeat",
+   "sidewalk-lamp:left|pride:repeat",
+   "sidewalk-lamp:left|traditional:repeat",
+   "sidewalk-lamp:right|modern:repeat",
+   "sidewalk-lamp:right|pride:repeat",
+   "sidewalk-lamp:right|traditional:repeat",
+   "sidewalk-tree:big:repeat",
+   "sidewalk-tree:palm-tree:repeat",
+   "sidewalk-wayfinding:large:repeat",
+   "sidewalk-wayfinding:medium:repeat",
+   "sidewalk-wayfinding:small:repeat",
+   "sidewalk:dense:repeat",
+   "sidewalk:empty:repeat",
+   "sidewalk:normal:repeat",
+   "sidewalk:sparse:repeat",
+   "transit-shelter:left|street-level:repeat",
+   "transit-shelter:right|street-level:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "surface-transit-platform-raised",
+  "category": "surfaces",
+  "file": "original/surfaces/surface-transit-platform-raised.png",
+  "sheet": "tiles-2.png",
+  "px": 624,
+  "py": 1512,
+  "pw": 216,
+  "ph": 216,
+  "feet": [
+   9.0,
+   9.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "transit-shelter:left|light-rail:repeat",
+   "transit-shelter:right|light-rail:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-stall-line-right",
+  "category": "markings",
+  "file": "original/markings/parking-stall-line-right.png",
+  "sheet": "tiles-2.png",
+  "px": 672,
+  "py": 360,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parking-lane:inbound|left:right",
+   "parking-lane:outbound|left:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "center-line-yellow-right",
+  "category": "markings",
+  "file": "original/markings/center-line-yellow-right.png",
+  "sheet": "tiles-2.png",
+  "px": 768,
+  "py": 240,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|shared:right",
+   "turn-lane:outbound|shared:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "striped-buffer-hatching",
+  "category": "markings",
+  "file": "original/markings/striped-buffer-hatching.png",
+  "sheet": "tiles-2.png",
+  "px": 768,
+  "py": 504,
+  "pw": 120,
+  "ph": 120,
+  "feet": [
+   5.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:bollard:repeat",
+   "divider:dome:repeat",
+   "divider:planter-box:repeat",
+   "divider:striped-buffer:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parklet-left",
+  "category": "furniture",
+  "file": "original/furniture/parklet-left.png",
+  "sheet": "tiles-2.png",
+  "px": 768,
+  "py": 816,
+  "pw": 192,
+  "ph": 192,
+  "feet": [
+   8.0,
+   8.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "parklet:left:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lane-edge-line-right",
+  "category": "markings",
+  "file": "original/markings/lane-edge-line-right.png",
+  "sheet": "tiles-2.png",
+  "px": 792,
+  "py": 360,
+  "pw": 24,
+  "ph": 120,
+  "feet": [
+   1.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|shared:right",
+   "bus-lane:outbound|shared:right",
+   "divider:bollard:right",
+   "divider:dome:right",
+   "divider:planter-box:right",
+   "divider:striped-buffer:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "center-line-yellow-left",
+  "category": "markings",
+  "file": "original/markings/center-line-yellow-left.png",
+  "sheet": "tiles-2.png",
+  "px": 840,
+  "py": 240,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|shared:left",
+   "turn-lane:outbound|shared:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lane-edge-line-left",
+  "category": "markings",
+  "file": "original/markings/lane-edge-line-left.png",
+  "sheet": "tiles-2.png",
+  "px": 840,
+  "py": 360,
+  "pw": 24,
+  "ph": 120,
+  "feet": [
+   1.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "bus-lane:inbound|shared:left",
+   "bus-lane:outbound|shared:left",
+   "divider:bollard:left",
+   "divider:dome:left",
+   "divider:planter-box:left",
+   "divider:striped-buffer:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "ground-cover-grass",
+  "category": "surfaces",
+  "file": "original/surfaces/ground-cover-grass.png",
+  "sheet": "tiles-2.png",
+  "px": 888,
+  "py": 1272,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:big-tree:repeat",
+   "divider:bush:repeat",
+   "divider:flowers:repeat",
+   "divider:palm-tree:repeat",
+   "divider:planting-strip:repeat"
+  ],
+  "note": ""
+ },
+ {
+  "name": "divider-dome",
+  "category": "furniture",
+  "file": "original/furniture/divider-dome.png",
+  "sheet": "tiles-2.png",
+  "px": 888,
+  "py": 1536,
+  "pw": 24,
+  "ph": 168,
+  "feet": [
+   1.0,
+   7.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:dome:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bush",
+  "category": "nature",
+  "file": "original/nature/bush.png",
+  "sheet": "tiles-2.png",
+  "px": 912,
+  "py": 1320,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:bush:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "flowers",
+  "category": "nature",
+  "file": "original/nature/flowers.png",
+  "sheet": "tiles-2.png",
+  "px": 912,
+  "py": 1416,
+  "pw": 48,
+  "ph": 120,
+  "feet": [
+   2.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:flowers:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "bollard",
+  "category": "furniture",
+  "file": "original/furniture/bollard.png",
+  "sheet": "tiles-2.png",
+  "px": 936,
+  "py": 1536,
+  "pw": 24,
+  "ph": 168,
+  "feet": [
+   1.0,
+   7.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:bollard:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-left-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-left-straight.png",
+  "sheet": "tiles-2.png",
+  "px": 984,
+  "py": 240,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|left-straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-left",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-left.png",
+  "sheet": "tiles-2.png",
+  "px": 984,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|left:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "planter-box",
+  "category": "nature",
+  "file": "original/nature/planter-box.png",
+  "sheet": "tiles-2.png",
+  "px": 984,
+  "py": 1536,
+  "pw": 96,
+  "ph": 168,
+  "feet": [
+   4.0,
+   7.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "divider:planter-box:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-left-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-left-straight.png",
+  "sheet": "tiles-2.png",
+  "px": 1200,
+  "py": 240,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|left-straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-left",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-left.png",
+  "sheet": "tiles-2.png",
+  "px": 1200,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|left:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-shared",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-shared.png",
+  "sheet": "tiles-2.png",
+  "px": 1200,
+  "py": 480,
+  "pw": 120,
+  "ph": 120,
+  "feet": [
+   5.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|shared:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-right-straight",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-right-straight.png",
+  "sheet": "tiles-2.png",
+  "px": 1416,
+  "py": 240,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|right-straight:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-right",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-right.png",
+  "sheet": "tiles-2.png",
+  "px": 1416,
+  "py": 360,
+  "pw": 96,
+  "ph": 120,
+  "feet": [
+   4.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|right:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-shared",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-shared.png",
+  "sheet": "tiles-2.png",
+  "px": 1440,
+  "py": 480,
+  "pw": 120,
+  "ph": 120,
+  "feet": [
+   5.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|shared:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-outbound-both",
+  "category": "markings",
+  "file": "original/markings/arrow-outbound-both.png",
+  "sheet": "tiles-2.png",
+  "px": 1536,
+  "py": 360,
+  "pw": 120,
+  "ph": 120,
+  "feet": [
+   5.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:outbound|both:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "arrow-inbound-both",
+  "category": "markings",
+  "file": "original/markings/arrow-inbound-both.png",
+  "sheet": "tiles-2.png",
+  "px": 1656,
+  "py": 360,
+  "pw": 120,
+  "ph": 120,
+  "feet": [
+   5.0,
+   5.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "turn-lane:inbound|both:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "transit-shelter-street-left",
+  "category": "transit",
+  "file": "original/transit/transit-shelter-street-left.png",
+  "sheet": "tiles-3.png",
+  "px": 216,
+  "py": 24,
+  "pw": 216,
+  "ph": 288,
+  "feet": [
+   9.0,
+   12.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "transit-shelter:left|street-level:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "transit-shelter-light-rail-left",
+  "category": "transit",
+  "file": "original/transit/transit-shelter-light-rail-left.png",
+  "sheet": "tiles-3.png",
+  "px": 216,
+  "py": 1224,
+  "pw": 216,
+  "ph": 288,
+  "feet": [
+   9.0,
+   12.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "transit-shelter:left|light-rail:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "transit-shelter-street-right",
+  "category": "transit",
+  "file": "original/transit/transit-shelter-street-right.png",
+  "sheet": "tiles-3.png",
+  "px": 456,
+  "py": 24,
+  "pw": 216,
+  "ph": 288,
+  "feet": [
+   9.0,
+   12.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "transit-shelter:right|street-level:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "transit-shelter-light-rail-right",
+  "category": "transit",
+  "file": "original/transit/transit-shelter-light-rail-right.png",
+  "sheet": "tiles-3.png",
+  "px": 456,
+  "py": 1224,
+  "pw": 216,
+  "ph": 312,
+  "feet": [
+   9.0,
+   13.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "transit-shelter:right|light-rail:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "streetcar-front",
+  "category": "vehicles",
+  "file": "original/vehicles/streetcar-front.png",
+  "sheet": "tiles-3.png",
+  "px": 720,
+  "py": 0,
+  "pw": 288,
+  "ph": 432,
+  "feet": [
+   12.0,
+   18.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "streetcar:inbound|colored:center",
+   "streetcar:inbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-traditional-both",
+  "category": "furniture",
+  "file": "original/furniture/lamp-traditional-both.png",
+  "sheet": "tiles-3.png",
+  "px": 768,
+  "py": 1176,
+  "pw": 72,
+  "ph": 360,
+  "feet": [
+   3.0,
+   15.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:both|traditional:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-traditional-left",
+  "category": "furniture",
+  "file": "original/furniture/lamp-traditional-left.png",
+  "sheet": "tiles-3.png",
+  "px": 840,
+  "py": 1176,
+  "pw": 72,
+  "ph": 360,
+  "feet": [
+   3.0,
+   15.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:left|traditional:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lamp-traditional-right",
+  "category": "furniture",
+  "file": "original/furniture/lamp-traditional-right.png",
+  "sheet": "tiles-3.png",
+  "px": 936,
+  "py": 1176,
+  "pw": 96,
+  "ph": 360,
+  "feet": [
+   4.0,
+   15.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:right|traditional:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "streetcar-rear",
+  "category": "vehicles",
+  "file": "original/vehicles/streetcar-rear.png",
+  "sheet": "tiles-3.png",
+  "px": 1008,
+  "py": 0,
+  "pw": 288,
+  "ph": 432,
+  "feet": [
+   12.0,
+   18.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "streetcar:outbound|colored:center",
+   "streetcar:outbound|regular:center"
+  ],
+  "note": ""
+ },
+ {
+  "name": "banner-pride-left",
+  "category": "furniture",
+  "file": "original/furniture/banner-pride-left.png",
+  "sheet": "tiles-3.png",
+  "px": 1056,
+  "py": 1200,
+  "pw": 96,
+  "ph": 144,
+  "feet": [
+   4.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:both|pride:center",
+   "sidewalk-lamp:left|pride:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "banner-pride-right",
+  "category": "furniture",
+  "file": "original/furniture/banner-pride-right.png",
+  "sheet": "tiles-3.png",
+  "px": 1056,
+  "py": 1392,
+  "pw": 96,
+  "ph": 144,
+  "feet": [
+   4.0,
+   6.0
+  ],
+  "source": "segments/info.js",
+  "usedBy": [
+   "sidewalk-lamp:right|pride:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lot-fence-left",
+  "category": "lots",
+  "file": "original/lots/lot-fence-left.png",
+  "sheet": "tiles-1.png",
+  "px": 1344,
+  "py": 0,
+  "pw": 96,
+  "ph": 216,
+  "feet": [
+   4.0,
+   9.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:fence:left (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lot-fence-right",
+  "category": "lots",
+  "file": "original/lots/lot-fence-right.png",
+  "sheet": "tiles-1.png",
+  "px": 1224,
+  "py": 0,
+  "pw": 96,
+  "ph": 216,
+  "feet": [
+   4.0,
+   9.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:fence:right (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "lot-grass",
+  "category": "lots",
+  "file": "original/lots/lot-grass.png",
+  "sheet": "tiles-1.png",
+  "px": 1104,
+  "py": 0,
+  "pw": 96,
+  "ph": 360,
+  "feet": [
+   4.0,
+   15.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:grass (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "waterfront-left-repeat",
+  "category": "lots",
+  "file": "original/lots/waterfront-left-repeat.png",
+  "sheet": "tiles-1.png",
+  "px": 0,
+  "py": 240,
+  "pw": 240,
+  "ph": 192,
+  "feet": [
+   10.0,
+   8.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:waterfront:left (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "waterfront-left-edge",
+  "category": "lots",
+  "file": "original/lots/waterfront-left-edge.png",
+  "sheet": "tiles-1.png",
+  "px": 240,
+  "py": 240,
+  "pw": 240,
+  "ph": 192,
+  "feet": [
+   10.0,
+   8.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:waterfront:left (street edge)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "waterfront-right-edge",
+  "category": "lots",
+  "file": "original/lots/waterfront-right-edge.png",
+  "sheet": "tiles-1.png",
+  "px": 0,
+  "py": 456,
+  "pw": 240,
+  "ph": 192,
+  "feet": [
+   10.0,
+   8.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:waterfront:right (street edge)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "waterfront-right-repeat",
+  "category": "lots",
+  "file": "original/lots/waterfront-right-repeat.png",
+  "sheet": "tiles-1.png",
+  "px": 240,
+  "py": 456,
+  "pw": 240,
+  "ph": 192,
+  "feet": [
+   10.0,
+   8.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:waterfront:right (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-lot-left-repeat",
+  "category": "lots",
+  "file": "original/lots/parking-lot-left-repeat.png",
+  "sheet": "tiles-3.png",
+  "px": 1630,
+  "py": 620,
+  "pw": 432,
+  "ph": 576,
+  "feet": [
+   18.0,
+   24.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:parking-lot:left (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-lot-left-edge",
+  "category": "lots",
+  "file": "original/lots/parking-lot-left-edge.png",
+  "sheet": "tiles-3.png",
+  "px": 2062,
+  "py": 620,
+  "pw": 432,
+  "ph": 576,
+  "feet": [
+   18.0,
+   24.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:parking-lot:left (street edge)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-lot-right-edge",
+  "category": "lots",
+  "file": "original/lots/parking-lot-right-edge.png",
+  "sheet": "tiles-3.png",
+  "px": 1630,
+  "py": 24,
+  "pw": 432,
+  "ph": 576,
+  "feet": [
+   18.0,
+   24.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:parking-lot:right (street edge)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "parking-lot-right-repeat",
+  "category": "lots",
+  "file": "original/lots/parking-lot-right-repeat.png",
+  "sheet": "tiles-3.png",
+  "px": 2062,
+  "py": 24,
+  "pw": 432,
+  "ph": 576,
+  "feet": [
+   18.0,
+   24.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:parking-lot:right (repeats)"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-narrow-left-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-left-ground-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1042,
+  "py": 910,
+  "pw": 432,
+  "ph": 360,
+  "feet": [
+   18.0,
+   15.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:left"
+  ],
+  "note": "bottom 12pt overlaps ground"
+ },
+ {
+  "name": "building-narrow-left-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-left-upper-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1042,
+  "py": 670,
+  "pw": 432,
+  "ph": 240,
+  "feet": [
+   18.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:left"
+  ],
+  "note": "stacks 1-19 times"
+ },
+ {
+  "name": "building-narrow-left-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-left-roof.png",
+  "sheet": "tiles-2.png",
+  "px": 1042,
+  "py": 622,
+  "pw": 432,
+  "ph": 48,
+  "feet": [
+   18.0,
+   2.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-narrow-right-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-right-ground-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1466,
+  "py": 910,
+  "pw": 432,
+  "ph": 360,
+  "feet": [
+   18.0,
+   15.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:right"
+  ],
+  "note": "bottom 12pt overlaps ground"
+ },
+ {
+  "name": "building-narrow-right-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-right-upper-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1466,
+  "py": 670,
+  "pw": 432,
+  "ph": 240,
+  "feet": [
+   18.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:right"
+  ],
+  "note": "stacks 1-19 times"
+ },
+ {
+  "name": "building-narrow-right-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-narrow-right-roof.png",
+  "sheet": "tiles-2.png",
+  "px": 1466,
+  "py": 622,
+  "pw": 432,
+  "ph": 48,
+  "feet": [
+   18.0,
+   2.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:narrow:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-wide-left-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-left-ground-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 24,
+  "py": 816,
+  "pw": 792,
+  "ph": 360,
+  "feet": [
+   33.0,
+   15.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:left"
+  ],
+  "note": "bottom 12pt overlaps ground"
+ },
+ {
+  "name": "building-wide-left-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-left-upper-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 24,
+  "py": 576,
+  "pw": 792,
+  "ph": 240,
+  "feet": [
+   33.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:left"
+  ],
+  "note": "stacks 1-19 times"
+ },
+ {
+  "name": "building-wide-left-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-left-roof.png",
+  "sheet": "tiles-3.png",
+  "px": 24,
+  "py": 528,
+  "pw": 792,
+  "ph": 48,
+  "feet": [
+   33.0,
+   2.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-wide-right-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-right-ground-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 814,
+  "py": 814,
+  "pw": 792,
+  "ph": 360,
+  "feet": [
+   33.0,
+   15.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:right"
+  ],
+  "note": "bottom 12pt overlaps ground"
+ },
+ {
+  "name": "building-wide-right-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-right-upper-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 814,
+  "py": 574,
+  "pw": 792,
+  "ph": 240,
+  "feet": [
+   33.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:right"
+  ],
+  "note": "stacks 1-19 times"
+ },
+ {
+  "name": "building-wide-right-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-wide-right-roof.png",
+  "sheet": "tiles-3.png",
+  "px": 814,
+  "py": 526,
+  "pw": 792,
+  "ph": 48,
+  "feet": [
+   33.0,
+   2.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:wide:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-home-left-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-home-left-ground-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 1196,
+  "py": 1402,
+  "pw": 792,
+  "ph": 612,
+  "feet": [
+   33.0,
+   25.5
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:left"
+  ],
+  "note": "includes porch + stairs; top 120pt is reused as the stacking upper floor"
+ },
+ {
+  "name": "building-home-left-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-home-left-upper-floor.png",
+  "sheet": "tiles-3.png",
+  "px": 1196,
+  "py": 1402,
+  "pw": 480,
+  "ph": 240,
+  "feet": [
+   20.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:left"
+  ],
+  "note": "stacks 1-19 times; same pixels as top of ground-floor sprite"
+ },
+ {
+  "name": "building-home-left-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-home-left-roof.png",
+  "sheet": "tiles-3.png",
+  "px": 1196,
+  "py": 1258,
+  "pw": 480,
+  "ph": 144,
+  "feet": [
+   20.0,
+   6.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:left"
+  ],
+  "note": ""
+ },
+ {
+  "name": "building-home-right-ground-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-home-right-ground-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1172,
+  "py": 1872,
+  "pw": 792,
+  "ph": 612,
+  "feet": [
+   33.0,
+   25.5
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:right"
+  ],
+  "note": "includes porch + stairs; top 120pt is reused as the stacking upper floor"
+ },
+ {
+  "name": "building-home-right-upper-floor",
+  "category": "buildings",
+  "file": "original/buildings/building-home-right-upper-floor.png",
+  "sheet": "tiles-2.png",
+  "px": 1484,
+  "py": 1872,
+  "pw": 480,
+  "ph": 240,
+  "feet": [
+   20.0,
+   10.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:right"
+  ],
+  "note": "stacks 1-19 times; same pixels as top of ground-floor sprite"
+ },
+ {
+  "name": "building-home-right-roof",
+  "category": "buildings",
+  "file": "original/buildings/building-home-right-roof.png",
+  "sheet": "tiles-2.png",
+  "px": 1484,
+  "py": 1728,
+  "pw": 480,
+  "ph": 144,
+  "feet": [
+   20.0,
+   6.0
+  ],
+  "source": "segments/buildings.js",
+  "usedBy": [
+   "building:residential:right"
+  ],
+  "note": ""
+ },
+ {
+  "name": "people-01..31",
+  "category": "people",
+  "file": "original/people/people-01-to-31-legacy-sheet.png",
+  "sheet": "tiles-2.png",
+  "px": 0,
+  "py": 1760,
+  "pw": 1200,
+  "ph": 786,
+  "feet": null,
+  "source": "segments/people.js + npm streetmix-illustrations (images.svg, symbols image-people--people-NN)",
+  "usedBy": [
+   "sidewalk (random crowd)"
+  ],
+  "note": "31 figures, each drawn into a 60x96pt box (viewBox 5x8 tiles); widths in tiles: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 3, 3, 3, 3, 3, 1, 1, 3, 4, 2, 3, 2, 3, 4, 3, 2]"
+ },
+ {
+  "name": "sky-front",
+  "category": "sky",
+  "file": "original/sky/sky-front.png",
+  "sheet": "sky-front.png",
+  "px": 0,
+  "py": 0,
+  "pw": 500,
+  "ph": 560,
+  "feet": null,
+  "source": "css/_sky.scss, gallery/thumbnail.js",
+  "usedBy": [
+   "street background",
+   "gallery thumbnails"
+  ],
+  "note": "front cloud band, tiles horizontally every 250 CSS px, drawn at 50% opacity, animated"
+ },
+ {
+  "name": "sky-rear",
+  "category": "sky",
+  "file": "original/sky/sky-rear.png",
+  "sheet": "sky-rear.png",
+  "px": 0,
+  "py": 0,
+  "pw": 500,
+  "ph": 240,
+  "feet": null,
+  "source": "css/_sky.scss, gallery/thumbnail.js",
+  "usedBy": [
+   "street background",
+   "gallery thumbnails"
+  ],
+  "note": "rear cloud band, tiles horizontally every 250 CSS px, animated"
+ }
+]

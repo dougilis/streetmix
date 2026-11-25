@@ -1,0 +1,1392 @@
+[
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1224,
+   19,
+   96,
+   177
+  ],
+  "names": [
+   "lot-fence-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1344,
+   19,
+   96,
+   177
+  ],
+  "names": [
+   "lot-fence-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   222,
+   26,
+   35,
+   207
+  ],
+  "names": [
+   "wayfinding-sign-small"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   121,
+   31,
+   68,
+   202
+  ],
+  "names": [
+   "wayfinding-sign-medium"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   0,
+   35,
+   96,
+   198
+  ],
+  "names": [
+   "wayfinding-sign-large"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1468,
+   105,
+   137,
+   81
+  ],
+  "names": [
+   "bike-rack-sidewalk-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1611,
+   105,
+   138,
+   81
+  ],
+  "names": [
+   "bike-rack-sidewalk-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1874,
+   121,
+   69,
+   65
+  ],
+  "names": [
+   "bench-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1945,
+   121,
+   69,
+   65
+  ],
+  "names": [
+   "bench-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1784,
+   156,
+   59,
+   30
+  ],
+  "names": [
+   "bench-center"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1104,
+   163,
+   96,
+   33
+  ],
+  "names": [
+   "lot-grass"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   751,
+   166,
+   34,
+   58
+  ],
+  "names": [
+   "arrow-inbound-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   965,
+   166,
+   36,
+   57
+  ],
+  "names": [
+   "arrow-outbound-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   240,
+   246,
+   240,
+   186
+  ],
+  "names": [
+   "waterfront-left-edge"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   2016,
+   281,
+   56,
+   71
+  ],
+  "names": [
+   "arrow-inbound-right-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   0,
+   327,
+   240,
+   105
+  ],
+  "names": [
+   "waterfront-left-repeat"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1279,
+   348,
+   59,
+   84
+  ],
+  "names": [
+   "bike-rack-parallel-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1372,
+   348,
+   59,
+   84
+  ],
+  "names": [
+   "bike-rack-parallel-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1468,
+   357,
+   137,
+   81
+  ],
+  "names": [
+   "bike-rack-road-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1611,
+   357,
+   138,
+   81
+  ],
+  "names": [
+   "bike-rack-road-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1106,
+   391,
+   30,
+   88
+  ],
+  "names": [
+   "parking-stall-line-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   751,
+   406,
+   34,
+   58
+  ],
+  "names": [
+   "arrow-inbound-grey-wide",
+   "arrow-inbound-grey-offset",
+   "arrow-inbound-grey"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   965,
+   406,
+   36,
+   57
+  ],
+  "names": [
+   "arrow-outbound-grey-wide",
+   "arrow-outbound-grey"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   2020,
+   409,
+   46,
+   55
+  ],
+  "names": [
+   "arrow-inbound-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   0,
+   462,
+   240,
+   186
+  ],
+  "names": [
+   "waterfront-right-edge"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   240,
+   543,
+   240,
+   105
+  ],
+  "names": [
+   "waterfront-right-repeat"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   936,
+   576,
+   384,
+   716
+  ],
+  "names": [
+   "lamp-modern-both"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1347,
+   576,
+   285,
+   716
+  ],
+  "names": [
+   "lamp-modern-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1680,
+   576,
+   280,
+   716
+  ],
+  "names": [
+   "lamp-modern-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   400,
+   680,
+   254,
+   241
+  ],
+  "names": [
+   "bus-rear-shared-lane",
+   "bus-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   678,
+   680,
+   251,
+   241
+  ],
+  "names": [
+   "bus-front-shared-lane",
+   "bus-front"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   22,
+   801,
+   145,
+   120
+  ],
+  "names": [
+   "car-rear",
+   "car-rear-parked"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   214,
+   801,
+   145,
+   120
+  ],
+  "names": [
+   "car-front",
+   "car-front-parked"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   2001,
+   811,
+   274,
+   480
+  ],
+  "names": [
+   "tree-palm"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   432,
+   967,
+   192,
+   383
+  ],
+  "names": [
+   "light-rail-front"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   672,
+   967,
+   192,
+   383
+  ],
+  "names": [
+   "light-rail-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   126,
+   1214,
+   55,
+   137
+  ],
+  "names": [
+   "cyclist-a-front"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   223,
+   1214,
+   53,
+   137
+  ],
+  "names": [
+   "cyclist-a-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   960,
+   1350,
+   209,
+   491
+  ],
+  "names": [
+   "tree-big"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   473,
+   1393,
+   113,
+   95
+  ],
+  "names": [
+   "rail-tracks-dark"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   713,
+   1393,
+   113,
+   95
+  ],
+  "names": [
+   "rail-tracks-light"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   126,
+   1454,
+   55,
+   137
+  ],
+  "names": [
+   "cyclist-b-front"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   224,
+   1454,
+   53,
+   137
+  ],
+  "names": [
+   "cyclist-b-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   414,
+   1537,
+   225,
+   272
+  ],
+  "names": [
+   "truck-front"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   710,
+   1537,
+   191,
+   272
+  ],
+  "names": [
+   "truck-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1981,
+   1640,
+   311,
+   361
+  ],
+  "names": [
+   "train-inception-secret"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   917,
+   1879,
+   326,
+   121
+  ],
+  "names": [
+   "car-side-angled-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   1301,
+   1879,
+   326,
+   121
+  ],
+  "names": [
+   "car-side-angled-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   33,
+   1880,
+   158,
+   120
+  ],
+  "names": [
+   "car-rear-signal-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   261,
+   1880,
+   158,
+   120
+  ],
+  "names": [
+   "car-rear-signal-right"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   489,
+   1880,
+   157,
+   120
+  ],
+  "names": [
+   "car-front-signal-left"
+  ]
+ },
+ {
+  "sheet": "tiles-1.png",
+  "bbox": [
+   718,
+   1880,
+   156,
+   120
+  ],
+  "names": [
+   "car-front-signal-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   788,
+   271,
+   28,
+   88
+  ],
+  "names": [
+   "center-line-yellow-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   840,
+   271,
+   28,
+   88
+  ],
+  "names": [
+   "center-line-yellow-left"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1217,
+   279,
+   56,
+   71
+  ],
+  "names": [
+   "arrow-outbound-left-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1440,
+   279,
+   56,
+   71
+  ],
+  "names": [
+   "arrow-outbound-right-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1001,
+   281,
+   56,
+   71
+  ],
+  "names": [
+   "arrow-inbound-left-straight"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   688,
+   391,
+   30,
+   88
+  ],
+  "names": [
+   "parking-stall-line-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   808,
+   391,
+   8,
+   88
+  ],
+  "names": [
+   "lane-edge-line-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   840,
+   391,
+   8,
+   88
+  ],
+  "names": [
+   "lane-edge-line-left"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   426,
+   402,
+   62,
+   66
+  ],
+  "names": [
+   "sharrow-inbound"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   545,
+   402,
+   62,
+   66
+  ],
+  "names": [
+   "sharrow-outbound"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1008,
+   408,
+   51,
+   56
+  ],
+  "names": [
+   "arrow-inbound-left"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1224,
+   409,
+   46,
+   54
+  ],
+  "names": [
+   "arrow-outbound-left"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1444,
+   409,
+   46,
+   54
+  ],
+  "names": [
+   "arrow-outbound-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1554,
+   409,
+   82,
+   54
+  ],
+  "names": [
+   "arrow-outbound-both"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1675,
+   409,
+   81,
+   55
+  ],
+  "names": [
+   "arrow-inbound-both"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1213,
+   511,
+   94,
+   88
+  ],
+  "names": [
+   "arrow-outbound-shared"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1453,
+   511,
+   94,
+   88
+  ],
+  "names": [
+   "arrow-inbound-shared"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   768,
+   535,
+   120,
+   88
+  ],
+  "names": [
+   "striped-buffer-hatching"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1042,
+   635,
+   392,
+   35
+  ],
+  "names": [
+   "building-narrow-left-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1508,
+   635,
+   390,
+   35
+  ],
+  "names": [
+   "building-narrow-right-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1042,
+   670,
+   384,
+   240
+  ],
+  "names": [
+   "building-narrow-left-upper-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1517,
+   670,
+   381,
+   240
+  ],
+  "names": [
+   "building-narrow-right-upper-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   528,
+   849,
+   191,
+   145
+  ],
+  "names": [
+   "parklet-right"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   769,
+   849,
+   190,
+   145
+  ],
+  "names": [
+   "parklet-left"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1042,
+   910,
+   412,
+   337
+  ],
+  "names": [
+   "building-narrow-left-ground-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1488,
+   910,
+   410,
+   337
+  ],
+  "names": [
+   "building-narrow-right-ground-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   624,
+   1062,
+   216,
+   90
+  ],
+  "names": [
+   "surface-light-rail-grey"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   336,
+   1072,
+   240,
+   104
+  ],
+  "names": [
+   "surface-divider-median"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   888,
+   1275,
+   96,
+   132
+  ],
+  "names": [
+   "ground-cover-grass",
+   "bush"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   624,
+   1288,
+   216,
+   104
+  ],
+  "names": [
+   "surface-sidewalk-concrete"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   336,
+   1302,
+   240,
+   90
+  ],
+  "names": [
+   "surface-asphalt"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   912,
+   1456,
+   48,
+   45
+  ],
+  "names": [
+   "flowers"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   96,
+   1542,
+   192,
+   90
+  ],
+  "names": [
+   "surface-bike-lane-green"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   336,
+   1542,
+   240,
+   90
+  ],
+  "names": [
+   "surface-bus-lane-red"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   624,
+   1564,
+   216,
+   164
+  ],
+  "names": [
+   "surface-transit-platform-raised"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   940,
+   1575,
+   16,
+   111
+  ],
+  "names": [
+   "bollard"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   984,
+   1593,
+   96,
+   93
+  ],
+  "names": [
+   "planter-box"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   889,
+   1675,
+   22,
+   11
+  ],
+  "names": [
+   "divider-dome"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1560,
+   1732,
+   390,
+   140
+  ],
+  "names": [
+   "building-home-right-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-2.png",
+  "bbox": [
+   1221,
+   1872,
+   729,
+   588
+  ],
+  "names": [
+   "building-home-right-ground-floor",
+   "building-home-right-upper-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   740,
+   2,
+   249,
+   317
+  ],
+  "names": [
+   "streetcar-front"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1028,
+   2,
+   249,
+   316
+  ],
+  "names": [
+   "streetcar-rear"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   220,
+   24,
+   207,
+   282
+  ],
+  "names": [
+   "transit-shelter-street-left"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   462,
+   24,
+   207,
+   282
+  ],
+  "names": [
+   "transit-shelter-street-right"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1630,
+   24,
+   432,
+   576
+  ],
+  "names": [
+   "parking-lot-right-edge"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   2062,
+   468,
+   431,
+   132
+  ],
+  "names": [
+   "parking-lot-right-repeat"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   41,
+   536,
+   736,
+   40
+  ],
+  "names": [
+   "building-wide-left-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   855,
+   541,
+   735,
+   33
+  ],
+  "names": [
+   "building-wide-right-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   855,
+   574,
+   735,
+   240
+  ],
+  "names": [
+   "building-wide-right-upper-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   41,
+   576,
+   727,
+   240
+  ],
+  "names": [
+   "building-wide-left-upper-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   2062,
+   620,
+   431,
+   576
+  ],
+  "names": [
+   "parking-lot-left-edge"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   833,
+   814,
+   757,
+   338
+  ],
+  "names": [
+   "building-wide-right-ground-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   41,
+   816,
+   753,
+   337
+  ],
+  "names": [
+   "building-wide-left-ground-floor"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1630,
+   1065,
+   432,
+   131
+  ],
+  "names": [
+   "parking-lot-left-repeat"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   852,
+   1176,
+   56,
+   355
+  ],
+  "names": [
+   "lamp-traditional-left"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   964,
+   1176,
+   56,
+   355
+  ],
+  "names": [
+   "lamp-traditional-right"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   783,
+   1188,
+   41,
+   342
+  ],
+  "names": [
+   "lamp-traditional-both"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1056,
+   1200,
+   94,
+   144
+  ],
+  "names": [
+   "banner-pride-left"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   220,
+   1224,
+   207,
+   269
+  ],
+  "names": [
+   "transit-shelter-light-rail-left"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   463,
+   1224,
+   206,
+   269
+  ],
+  "names": [
+   "transit-shelter-light-rail-right"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1214,
+   1262,
+   390,
+   140
+  ],
+  "names": [
+   "building-home-left-roof"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1058,
+   1393,
+   94,
+   143
+  ],
+  "names": [
+   "banner-pride-right"
+  ]
+ },
+ {
+  "sheet": "tiles-3.png",
+  "bbox": [
+   1214,
+   1402,
+   729,
+   588
+  ],
+  "names": [
+   "building-home-left-ground-floor",
+   "building-home-left-upper-floor"
+  ]
+ }
+]

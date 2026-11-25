@@ -1,0 +1,56 @@
+{
+ "source": "VHB Brand Book pp. 66-69 (vector swatch fills sampled from the PDF; confirm against the Brand Toolkit)",
+ "core": {
+  "teal": "#006B6E",
+  "aqua": "#00839B",
+  "leaf-green": "#789B4A",
+  "medium-gray": "#97989A",
+  "cobalt": "#0071B9",
+  "midnight-blue": "#272B67"
+ },
+ "bold": {
+  "plum": "#662F6C",
+  "berry": "#8B1D41",
+  "papaya": "#CE812D",
+  "citron": "#B4CC43"
+ },
+ "neutral": {
+  "charcoal": "#212721",
+  "espresso": "#3E2B2F",
+  "dark-grey": "#5E5C5A",
+  "light-grey": "#E5E5E5"
+ },
+ "logo": {
+  "deep-teal": "#005356"
+ },
+ "derived-not-in-brand-book": {
+  "aqua-tint": "#CFE6EB",
+  "leaf-tint": "#DDE8CC",
+  "teal-tint": "#CCE1E2",
+  "cobalt-tint": "#CCE3F1",
+  "leaf-light": "#8FB25C",
+  "leaf-dark": "#5F8038",
+  "vehicle-body": "#F4F6F6",
+  "concrete": "#DADBDC",
+  "wood": "#A8703A",
+  "lamp-glow": "#FFF4C7",
+  "marking-yellow": "#F2C230"
+ },
+ "fonts": {
+  "everyday": "Segoe UI",
+  "pursuits-and-mapping": "Source Sans Pro",
+  "corporate-collateral (licensed)": [
+   "Gotham",
+   "Mercury Text G1"
+  ]
+ },
+ "streetmix-scss-mapping": {
+  "$sky-colour": "#00839B (or a cobalt -> aqua gradient, see preview)",
+  "$background-dirt-colour": "#3E2B2F",
+  "$ui-colour": "#CFE6EB",
+  "$bottom-background": "#E5E5E5",
+  "$warning-colour": "#8B1D41",
+  "$segment-text": "#212721",
+  "$header-footer-background": "#FFFFFF"
+ }
+}

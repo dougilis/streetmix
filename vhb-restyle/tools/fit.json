@@ -1,0 +1,22 @@
+{
+ "bench-right": "translate(1.52 -0.00) scale(0.9559)",
+ "bench-left": "translate(1.52 -0.00) scale(0.9559)",
+ "bike-rack-parallel-left": "translate(0.95 1.21) scale(0.9516)",
+ "bike-rack-parallel-right": "translate(1.90 1.21) scale(0.9516)",
+ "lamp-modern-both": "translate(3.92 14.61) scale(0.9796)",
+ "lamp-modern-right": "translate(-3.19 1.99) scale(0.9972)",
+ "lamp-modern-left": "translate(3.99 2.55) scale(0.9964)",
+ "tree-palm": "translate(-4.15 9.66) scale(0.9658)",
+ "train-inception-secret": "translate(0.99 2.31) scale(0.9936)",
+ "sharrow-inbound": "translate(0.00 -1.00) scale(1.0000)",
+ "sharrow-outbound": "translate(0.00 1.00) scale(1.0000)",
+ "parklet-right": "translate(0.00 0.76) scale(0.9948)",
+ "parklet-left": "translate(0.99 0.76) scale(0.9948)",
+ "flowers": "translate(1.02 -0.00) scale(0.9574)",
+ "planter-box": "translate(0.98 1.90) scale(0.9796)",
+ "building-home-right-roof": "translate(0.00 0.36) scale(0.9974)",
+ "lamp-traditional-left": "translate(-1.00 0.00) scale(1.0000)",
+ "lamp-traditional-right": "translate(1.00 0.00) scale(1.0000)",
+ "lamp-traditional-both": "translate(0.24 3.95) scale(0.9884)",
+ "building-home-left-roof": "translate(1.00 0.36) scale(0.9974)"
+}
