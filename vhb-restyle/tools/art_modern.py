@@ -11,16 +11,20 @@ def mir(s, w, on): return mirror(s, w) if on else s
 
 
 # ------------------------------------------------------------------ vehicles
-def car(st, w, h, rear=False, signal=None, cw=145):
-    W = min(cw, w); ox = (w - W) if signal == 'left' else 0; s = ''
-    if signal: s += circ(ox + (.12 * W if signal == 'left' else .88 * W), .55 * h, .16 * W, papaya, .3)
-    c = st.r(.08 * W, .78 * h, .18 * W, .22 * h, charcoal, 7, ol=False) + st.r(.74 * W, .78 * h, .18 * W, .22 * h, charcoal, 7, ol=False)
-    c += st.r(.17 * W, .02 * h, .66 * W, .6 * h, white, 30) + st.r(.02 * W, .4 * h, .96 * W, .48 * h, teal, 24) + st.r(.02 * W, .4 * h, .96 * W, .26 * h, white, 20, ol=False)
-    c += st.glass(.24 * W, .09 * h, .52 * W, .28 * h, 16)
-    c += st.r(.09 * W, .5 * h, .82 * W, .075 * h, berry if rear else lamp, 5, ol=False)
-    if rear: c += st.r(.4 * W, .7 * h, .2 * W, .1 * h, white, 3, ol=False)
-    if signal: c += rr((.09 if signal == 'left' else .73) * W, .5 * h, .18 * W, .075 * h, papaya, 5)
-    return s + g(c, f'translate({f(ox)} 0)')
+def car(st, w, h, rear=False, signal=None, cw=145, bodyc=white, belt=teal, door=None, topper=None):
+    W = min(cw, w); side = signal or door; ox = (w - W) if side == 'left' else 0; s = ''; t = .1 * h if topper else 0; H = h - t
+    if signal: s += circ(ox + (.12 * W if signal == 'left' else .88 * W), t + .55 * H, .16 * W, papaya, .3)
+    if door:                                   # an open door swung out to one side
+        dw = w - W + .06 * W; dx = 0 if door == 'left' else w - dw
+        s += st.r(dx, t + .34 * H, dw, .44 * H, bodyc, 8) + st.glass(dx + dw * .14, t + .38 * H, dw * .62, .16 * H, 5)
+    c = st.r(.08 * W, .78 * H, .18 * W, .22 * H, charcoal, 7, ol=False) + st.r(.74 * W, .78 * H, .18 * W, .22 * H, charcoal, 7, ol=False)
+    c += st.r(.17 * W, .02 * H, .66 * W, .6 * H, bodyc, 30) + st.r(.02 * W, .4 * H, .96 * W, .48 * H, belt, 24) + st.r(.02 * W, .4 * H, .96 * W, .26 * H, bodyc, 20, ol=False)
+    c += st.glass(.24 * W, .09 * H, .52 * W, .28 * H, 16)
+    c += st.r(.09 * W, .5 * H, .82 * W, .075 * H, berry if rear else lamp, 5, ol=False)
+    if rear: c += st.r(.4 * W, .7 * H, .2 * W, .1 * H, white, 3, ol=False)
+    if signal: c += rr((.09 if signal == 'left' else .73) * W, .5 * H, .18 * W, .075 * H, papaya, 5)
+    if topper: c += st.r(.4 * W, -t, .2 * W, t + .04 * H, topper, 5)
+    return s + g(c, f'translate({f(ox)} {f(t)})')
 
 
 def car_side(st, w, h, facing='left'):
@@ -137,9 +141,9 @@ def tufts(st, w, h, n):
     return s
 
 
-def flowers(st, w, h):
+def flowers(st, w, h, cols=(berry, papaya, citron)):
     s = ''
-    for x, top, c in ((.2, .12, berry), (.5, .3, papaya), (.8, .02, citron)):
+    for (x, top), c in zip(((.2, .12), (.5, .3), (.8, .02)), cols):
         s += st.ln(x * w, h, x * w, top * h + 8, leaf3, 3) + st.c(x * w, top * h + .14 * h, .13 * w, c, ol=False)
     return s
 
@@ -206,8 +210,9 @@ def lamp_trad(st, w, h, px, arms):
     s = st.r(px - 4, 40, 8, h - 40, midnight, 3, ol=False) + st.r(px - 9, h - 28, 18, 28, midnight, 4, ol=False)
     def globe(cx, y): return st.c(cx, y + 18, 15, lamp) + st.r(cx - 8, y + 30, 16, 6, midnight, 2, ol=False)
     if not arms: return s + globe(px, 0)
+    reach = (w - 34) if len(arms) == 1 else (w / 2 - 18)
     for d in arms:
-        cx = px + d * (w - 34); s += st.ln(px, 44, cx, 44, midnight, 5) + globe(cx, 6)
+        cx = px + d * reach; s += st.ln(px, 44, cx, 44, midnight, 5) + globe(cx, 6)
     return s
 
 

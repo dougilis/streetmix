@@ -32,7 +32,20 @@ So neither new iteration uses gradients inside sprites. B takes the printmaking 
 
 Sources: [Creative Bloq, illustration trends 2026](https://www.creativebloq.com/art/illustration/messy-meaningful-and-made-by-humans-the-biggest-illustration-trends-for-2026) · [Creative Bloq, graphic design trends 2026](https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026) · [Fireart, illustration trends](https://fireart.studio/blog/illustration-trends/) · [ManyPixels, icon design trends](https://www.manypixels.co/blog/post/the-key-trends-in-icon-design-in-2022) · [Made Good Designs, what's in and out](https://madegooddesigns.com/graphic-design-trends-2026/) · [Webflow, after Corporate Memphis](https://webflow.com/blog/after-corporate-memphis) · [GetIllustrations, styles to watch](https://getillustrations.com/blog/emerging-illustration-styles-to-watch-in-2026)
 
-## Implemented: the marker sketch set is now the app's artwork
+## Current Streetmix: branch `claude/vhb-sketch-upstream`
+
+This fork's `master` is from June 2016. The sketch set has also been put onto a branch cut from the current
+upstream `streetmix/streetmix` `main` (17 Nov 2026), where artwork is 338 individual SVG files rather than three
+sprite sheets.
+
+![Current Streetmix running with the sketch sprites](upstream-app-screenshot.png)
+
+That screenshot is the real app, built and run locally from that branch. 154 illustrations are redrawn; 182 are
+still the original art (35 road markings on purpose, the rest not drawn yet). The full lists are in
+`packages/illustrations/VHB-SKETCH.md` on that branch. `tools/upstream_measure.js` and `tools/upstream_export.py`
+here are what produced them.
+
+## Implemented: the marker sketch set is now the 2016 app's artwork
 
 Open `vhb-streetmix-sketch.html` in a browser to see it. It is one self-contained file that draws a live, editable street from the sketch sheets, using the segment definitions in `assets/scripts/segments/info.js` and the same crop coordinates and placement maths as the app. Switch to "Original art" in the header to see the old sheets through the same code.
 
