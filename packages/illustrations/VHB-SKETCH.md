@@ -11,7 +11,7 @@ positions defined in `packages/parts` are unchanged.
 - `client/src/segments/view.ts`: the hard-coded ground colours (asphalt, concrete, bike and bus lane tints, sand, wall, earth).
 - `client/src/sky/SkyBox/sky-front.svg`, `sky-rear.svg` and `public/images/sky-front.svg`, `sky-rear.svg`: sketch clouds.
 
-## Redrawn (154 files)
+## Redrawn (192 files)
 
 - **bikes** (8): bike-rack-parallel-left, bike-rack-parallel-right, bike-rack-perpendicular-left, bike-rack-perpendicular-right, biker-01-inbound, biker-01-outbound, biker-02-inbound, biker-02-outbound
 - **boundaries** (11): fenced-lot-left, fenced-lot-right, grass, parking-lot-left, parking-lot-right, water-left, water-right, waterfront-left, waterfront-right, waterfront2-left, waterfront2-right
@@ -25,12 +25,13 @@ positions defined in `packages/parts` are unchanged.
 - **plants** (7): bush, flowers-blue, flowers-orange, flowers-red, flowers-white, flowers-yellow, grass
 - **secret** (1): inception-train
 - **sky** (2): sky-front, sky-rear
+- **thumbnails** (38): beach, bike-lane, bikeshare, bioswale, brt-lane, brt-station, bus-lane, divider, drainage-channel, drive-lane, flex-zone-curb, flex-zone, food-truck, guardrail, light-rail, magic-carpet, marsh, missing, outdoor-dining, parking-lane, parklet, scooter-drop-zone, scooter, sidewalk-bench, sidewalk-bike-rack, sidewalk-lamp, sidewalk-tree, sidewalk-wayfinding, sidewalk, slope, street-vendor, streetcar, temporary, train, transit-shelter, turn-lane, utilities, wall
 - **transit** (14): bus-inbound-alt, bus-inbound, bus-outbound-alt, bus-outbound, light-rail-inbound, light-rail-outbound, streetcar-inbound, streetcar-outbound, tracks-dark, tracks-light, transit-shelter-01-left, transit-shelter-01-right, transit-shelter-02-left, transit-shelter-02-right
 - **trees** (2): palm-tree, tree
 - **vehicles** (26): car-angled-front-left, car-angled-front-right, car-angled-rear-left, car-angled-rear-right, car-inbound-door-left, car-inbound-door-right, car-inbound-turn-signal-left, car-inbound-turn-signal-right, car-inbound, car-outbound-door-left, car-outbound-door-right, car-outbound-turn-signal-left, car-outbound-turn-signal-right, car-outbound, car-sideways-left, car-sideways-right, rideshare-inbound-door-left, rideshare-inbound-door-right, rideshare-outbound-door-left, rideshare-outbound-door-right, taxi-inbound-door-left, taxi-inbound-door-right, taxi-outbound-door-left, taxi-outbound-door-right, truck-inbound, truck-outbound
 - **wayfinding** (3): nyc-wayfinding-pylon-large, nyc-wayfinding-pylon-medium, nyc-wayfinding-pylon-small
 
-## Still the original Streetmix art (182 files)
+## Still the original Streetmix art (144 files)
 
 Road markings are left alone on purpose: they follow real-world standards and read the same in any style.
 Everything else here simply has not been drawn yet, so streets that use these will show mixed styles.
@@ -51,7 +52,6 @@ Everything else here simply has not been drawn yet, so streets that use these wi
 - **plants** (8): bioswale-pieces-slope-left, bioswale-pieces-slope-right, marsh-grass-01, marsh-grass-02, marsh-grass-03, marsh-grass-04, marsh-grass-05, marsh-grass-06
 - **scooters** (6): scooter-inbound, scooter-left-docked, scooter-left-rider, scooter-outbound, scooter-right-docked, scooter-right-rider
 - **sky** (6): holodeck-grid, icon-holodeck, icon-night, moon, stars, super-blood-wolf-moon
-- **thumbnails** (38): beach, bike-lane, bikeshare, bioswale, brt-lane, brt-station, bus-lane, divider, drainage-channel, drive-lane, flex-zone-curb, flex-zone, food-truck, guardrail, light-rail, magic-carpet, marsh, missing, outdoor-dining, parking-lane, parklet, scooter-drop-zone, scooter, sidewalk-bench, sidewalk-bike-rack, sidewalk-lamp, sidewalk-tree, sidewalk-wayfinding, sidewalk, slope, street-vendor, streetcar, temporary, train, transit-shelter, turn-lane, utilities, wall
 - **transit** (14): av-shuttle-inbound, av-shuttle-outbound, brt-bus-inbound, brt-bus-outbound, brt-station-center, brt-station-left, brt-station-piece-center, brt-station-piece-left-edge, brt-station-piece-left-platform, brt-station-piece-right-edge, brt-station-piece-right-platform, brt-station-right, double-decker-bus-inbound, double-decker-bus-outbound
 - **utilities** (7): drainage-channel-piece-center, drainage-channel-piece-left-slanted, drainage-channel-piece-left-vertical, drainage-channel-piece-right-slanted, drainage-channel-piece-right-vertical, utility-pole-left, utility-pole-right
 - **vehicles** (12): av-inbound, av-outbound, foodtruck-left, foodtruck-right, krz-motorbike-inbound, krz-motorbike-outbound, magic-carpet-aladdin-jasmine, magic-carpet-aladdin, magic-carpet-jasmine-aladdin, magic-carpet-jasmine, microvan-inbound, microvan-outbound
@@ -61,4 +61,4 @@ Everything else here simply has not been drawn yet, so streets that use these wi
 ## Regenerating
 
 The drawings are generated, not hand-edited. The generator lives in `vhb-restyle/tools/` on the
-`claude/loving-ride-fkvnk3` branch of this fork (`upstream_measure.js`, then `upstream_export.py`).
+`claude/loving-ride-fkvnk3` branch of this fork (`upstream_measure.js`, then `upstream_export.py` and `upstream_thumbs.py`).
