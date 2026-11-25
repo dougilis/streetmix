@@ -4,6 +4,7 @@ Run: generate.py -> node render.js --probe -> fit.py -> generate.py"""
 import json, os
 from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__)); PAD = 40
+V = os.environ.get('VHB_VARIANT', 'classic'); FITFILE = HERE + ('/fit.json' if V == 'classic' else f'/fit-{V}.json')
 objs = json.load(open(HERE + '/../art-objects.json')); fits = {}
 TILING = ('waterfront', 'lot-', 'surface', 'striped', 'parking-lot', 'ground-cover')   # must meet their neighbours edge to edge: fixed in the art, never rescaled
 for o in objs:
@@ -17,4 +18,4 @@ for o in objs:
     X0, X1 = w / 2 + (x0 - w / 2) * s, w / 2 + (x1 - w / 2) * s; Y0, Y1 = h + (y0 - h) * s, h + (y1 - h) * s
     dx = -X0 if X0 < 0 else (w - X1 if X1 > w else 0); dy = -Y0 if Y0 < 0 else (h - Y1 if Y1 > h else 0)
     fits[n] = f'translate({w / 2 * (1 - s) + dx:.2f} {h * (1 - s) + dy:.2f}) scale({s:.4f})'
-json.dump(fits, open(HERE + '/fit.json', 'w'), indent=1); print(len(fits), 'sprites adjusted')
+json.dump(fits, open(FITFILE, 'w'), indent=1); print(len(fits), 'sprites adjusted')

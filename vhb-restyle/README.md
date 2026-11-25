@@ -8,6 +8,30 @@ Figma file: https://www.figma.com/design/9fos3MOyiRGBFoWqXyMX1U
 
 The scene above is a mock-up composed from the new art, not a capture of the running app.
 
+## Three style iterations
+
+![Three styles](three-styles.png)
+
+| | Folder | Figma page | What it is |
+|---|---|---|---|
+| **A. Classic** | `vhb/` | 01, 03 | The first pass: the original Streetmix drawings re-thought in VHB colours and the logo's leaf shape. Detailed, close to the source proportions. |
+| **B. Print** | `vhb-print/` | 05 | Seven inks on warm paper, no outlines, shapes that overprint each other, halftone dots for shade, midnight-blue roadway. |
+| **C. Marker sketch** | `vhb-sketch/` | 06 | A loose ink line that overshoots its corners with flat marker colour dropped in slightly off-register, the way an urban designer renders a street section by hand. |
+
+B and C share new, simpler geometry (one-box vehicles, lollipop trees, globe lamps, flat canopies, pictogram people) drawn once in `tools/art_modern.py` and rendered through two styles in `tools/styles.py`. Road markings are the same in all three because they follow real-world standards.
+
+### Why these two directions
+
+A short read of 2026 illustration and graphic-design trend writing gave a consistent picture:
+
+- Flat shapes are still the base, but with one tactile layer on top: print grain and halftone, limited palettes, visible linework, a human hand.
+- Bold, simple silhouettes over fine detail.
+- Glossy soft gradients and blob-like 3D are now read as generic defaults, and the big-limbed "Corporate Memphis" figure style is exhausted. Low-poly faceting, which is what the original Streetmix art uses, belongs to the same earlier period.
+
+So neither new iteration uses gradients inside sprites. B takes the printmaking and limited-palette route; C takes the hand-drawn linework route, which also suits a firm of planners and engineers. These sources are trend roundups from design blogs and agencies, not research, so treat them as direction rather than proof.
+
+Sources: [Creative Bloq, illustration trends 2026](https://www.creativebloq.com/art/illustration/messy-meaningful-and-made-by-humans-the-biggest-illustration-trends-for-2026) · [Creative Bloq, graphic design trends 2026](https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026) · [Fireart, illustration trends](https://fireart.studio/blog/illustration-trends/) · [ManyPixels, icon design trends](https://www.manypixels.co/blog/post/the-key-trends-in-icon-design-in-2022) · [Made Good Designs, what's in and out](https://madegooddesigns.com/graphic-design-trends-2026/) · [Webflow, after Corporate Memphis](https://webflow.com/blog/after-corporate-memphis) · [GetIllustrations, styles to watch](https://getillustrations.com/blog/emerging-illustration-styles-to-watch-in-2026)
+
 ## What the app draws, and where it comes from
 
 | Graphic | Count | Source in the app |
@@ -30,37 +54,22 @@ Several crops share the same pixels (a parked car is a narrower crop of the same
 | `art-objects.json` | The 115 distinct drawings with their exact footprint on each sheet |
 | `original/` | The untouched sheets, each sprite sliced into its own named PNG, and a contact sheet |
 | `brand-tokens.json` | VHB colours and fonts from the brand book, plus a suggested mapping for the app's SCSS colour variables |
-| `vhb/sheets/tiles-1/2/3.svg` and `.png` | The redrawn sheets, same size and layout as the originals |
-| `vhb/sprites/` | Each redrawn sprite as its own SVG |
-| `vhb/people/`, `vhb/sky/` | 31 people and the two cloud bands |
-| `vhb/preview/` | The street-scene mock-up and a before/after of sheet 1 |
+| `vhb/`, `vhb-print/`, `vhb-sketch/` | The three iterations. Each has `sheets/tiles-1/2/3.svg` and `.png` (same size and layout as the originals), `sprites/`, `people/`, `sky/` and `preview/` |
 | `FIGMA-PROMPT.md` | A self-contained brief for regenerating or extending the set in Figma or with an illustrator |
 | `tools/` | The generator. Change a colour in `svgkit.py` or a drawing in `art_*.py` and rerun |
 
 ## Regenerating
 
-```bash
-python3 tools/generate.py
-```
+Set the style first (`classic` is the default; the others are `print` and `sketch`):
 
 ```bash
-node tools/render.js --probe
+export VHB_VARIANT=print
 ```
 
-```bash
-python3 tools/fit.py
-```
+Then run the pipeline:
 
 ```bash
-python3 tools/generate.py
-```
-
-```bash
-python3 tools/preview.py
-```
-
-```bash
-node tools/render.js
+python3 tools/generate.py && node tools/render.js --probe && python3 tools/fit.py && python3 tools/generate.py && python3 tools/preview.py && node tools/render.js
 ```
 
 The middle steps measure each sprite and nudge any that spill outside their footprint. Needs Python 3 with Pillow, and Node with Playwright.
@@ -76,8 +85,8 @@ The middle steps measure each sprite and nudge any that spill outside their foot
 
 ## Checked
 
-- The three new sheets are the same pixel size as the originals.
-- No new sprite paints outside the footprint of the sprite it replaces, on any sheet.
+- In all three iterations the sheets are the same pixel size as the originals.
+- In all three, no new sprite paints outside the footprint of the sprite it replaces.
 - The Figma file holds the same sheets as editable vectors, one named group per sprite.
 
 ## Not done

@@ -11,7 +11,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from svgkit import *
 import art_vehicles as V, art_street as S
 
-HERE = os.path.dirname(os.path.abspath(__file__)); BASE = os.path.dirname(HERE); OUT = BASE + '/vhb'
+import art_modern as M, styles
+HERE = os.path.dirname(os.path.abspath(__file__)); BASE = os.path.dirname(HERE)
+# VHB_VARIANT=classic (default, the first pass) | print | sketch
+VARIANT = os.environ.get('VHB_VARIANT', 'classic'); ST = None if VARIANT == 'classic' else styles.STYLES[VARIANT]()
+OUT = BASE + ('/vhb' if VARIANT == 'classic' else '/vhb-' + VARIANT); FITFILE = HERE + ('/fit.json' if VARIANT == 'classic' else f'/fit-{VARIANT}.json')
 man = json.load(open(BASE + '/manifest.json')); objs = json.load(open(BASE + '/art-objects.json'))
 sheets = {f'tiles-{i}.png': Image.open(f'{BASE}/original/sheets/tiles-{i}.png').convert('RGBA') for i in (1, 2, 3)}
 bymanifest = {m['name']: m for m in man}
@@ -104,14 +108,34 @@ def draw(o):
     raise KeyError(n)
 
 
-FITS = json.load(open(HERE + '/fit.json')) if os.path.exists(HERE + '/fit.json') else {}
+FITS = json.load(open(FITFILE)) if os.path.exists(FITFILE) else {}
+
+
+class ctx: pass
+
+
+def draw_any(o):
+    return draw(o) if ST is None else M.draw(o, ST, ctx)
+
+
+def person(i):
+    if ST is None: return S.person(i)
+    ST.seed(f'person-{i}'); return M.person(ST, i)
+
+
+def clouds(w, h, seed, n, o):
+    if ST is None: return S.clouds(w, h, seed, n, o)
+    ST.seed(f'clouds-{seed}'); return M.clouds(ST, w, h, seed, n, o)
 PAD = 40
 
 
 def fitted(o):
     """Art nudged/scaled (see fit.py) so nothing spills outside the footprint the app crops for this sprite."""
-    art = draw(o); t = FITS.get(o['names'][0])
+    art = draw_any(o); t = FITS.get(o['names'][0])
     return g(art, t) if t else art
+
+
+ctx.foot = staticmethod(foot); ctx.content_bbox = staticmethod(content_bbox); ctx.bymanifest = bymanifest; ctx.byname = byname
 
 
 def write(path, content):
@@ -124,21 +148,21 @@ def main():
         x, y, w, h = o['bbox']; art = fitted(o); n = o['names'][0]
         layers[o['sheet']].append(g(art, f'translate({x} {y})', n))
         write(f'{OUT}/sprites/{cat[n]}/{n}.svg', svg(w, h, art))
-        write(f'{HERE}/.probe/{n}.svg', svg(w + 2 * PAD, h + 2 * PAD, g(draw(o), f'translate({PAD} {PAD})')))
-        index.append(dict(name=n, alsoCoveredCrops=o['names'][1:], category=cat[n], sheet=o['sheet'], x=x, y=y, w=w, h=h, file=f'vhb/sprites/{cat[n]}/{n}.svg'))
+        write(f'{HERE}/.probe/{n}.svg', svg(w + 2 * PAD, h + 2 * PAD, g(draw_any(o), f'translate({PAD} {PAD})')))
+        index.append(dict(name=n, alsoCoveredCrops=o['names'][1:], category=cat[n], sheet=o['sheet'], x=x, y=y, w=w, h=h, file=f'{os.path.basename(OUT)}/sprites/{cat[n]}/{n}.svg'))
     for k, ls in layers.items():
         W, H = sheets[k].size; write(f'{OUT}/sheets/{k[:-4]}.svg', svg(W, H, ''.join(ls)))
     # people
     cols = 8; ps = ''
     for i in range(1, 32):
-        art = S.person(i); write(f'{OUT}/people/people-{i:02d}.svg', svg(120, 192, art))
+        art = person(i); write(f'{OUT}/people/people-{i:02d}.svg', svg(120, 192, art))
         ps += g(art, f'translate({((i - 1) % cols) * 130 + 10} {((i - 1) // cols) * 210 + 10})', f'people-{i:02d}')
     write(f'{OUT}/people/people-sheet.svg', svg(cols * 130 + 10, 4 * 210 + 10, ps))
     # sky
-    write(f'{OUT}/sky/sky-rear.svg', svg(500, 240, S.clouds(500, 240, 11, 5, .55)))
-    write(f'{OUT}/sky/sky-front.svg', svg(500, 560, S.clouds(500, 560, 23, 7, .9)))
+    write(f'{OUT}/sky/sky-rear.svg', svg(500, 240, clouds(500, 240, 11, 5, .55)))
+    write(f'{OUT}/sky/sky-front.svg', svg(500, 560, clouds(500, 560, 23, 7, .9)))
     json.dump(index, open(f'{OUT}/sprite-index.json', 'w'), indent=1)
-    print(len(index), 'art objects,', 31, 'people, 2 sky bands')
+    print(VARIANT + ':', len(index), 'art objects,', 31, 'people, 2 sky bands')
 
 
 if __name__ == '__main__':

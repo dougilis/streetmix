@@ -17,18 +17,20 @@ def stack(kind, side, x, gy, floors):
 
 W, H, GY = 3042, 1180, 930; SW = GY - 14
 segs = [('sidewalk', 192), ('sidewalk', 96), ('bike', 144), ('asphalt', 192), ('asphalt', 240), ('bus', 288), ('median', 96), ('rail', 288), ('sidewalk', 216), ('sidewalk', 144)]
-COL = dict(sidewalk=lgrey, bike=leaf, asphalt=dgrey, bus=berry, median=concrete, rail='#7B7C7E')
-s = f'<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{cobalt}"/><stop offset=".55" stop-color="{aqua}"/><stop offset="1" stop-color="#7FC1CD"/></linearGradient></defs>'
+SF = G.SURF if G.ST is None else G.ST.SURF
+COL = dict(sidewalk=SF['surface-sidewalk-concrete'], bike=SF['surface-bike-lane-green'], asphalt=SF['surface-asphalt'], bus=SF['surface-bus-lane-red'], median=SF['surface-divider-median'], rail=SF['surface-light-rail-grey'])
+sky = (cobalt, aqua, '#7FC1CD') if G.ST is None else G.ST.sky; dirt = espresso if G.ST is None else G.ST.dirt
+s = f'<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{sky[0]}"/><stop offset=".55" stop-color="{sky[1]}"/><stop offset="1" stop-color="{sky[2]}"/></linearGradient></defs>'
 s += f'<rect width="{W}" height="{GY}" fill="url(#sky)"/>'
-for x in range(0, W, 500): s += g(S.clouds(500, 240, 11, 5, .35), f'translate({x} 60)') + g(S.clouds(500, 560, 23, 7, .5), f'translate({x} 250)')
-s += rr(0, GY, W, H - GY, espresso)
+for x in range(0, W, 500): s += g(G.clouds(500, 240, 11, 5, .35 if G.VARIANT != 'sketch' else .6), f'translate({x} 60)') + (g(G.clouds(500, 560, 23, 7, .5), f'translate({x} 250)') if G.VARIANT != 'sketch' else '')
+s += rr(0, GY, W, H - GY, dirt)
 s += stack('wide', 'left', 0, SW, 2)
 x = 736; cx = {}
 for i, (k, w) in enumerate(segs):
     top = SW if k in ('sidewalk', 'median') else GY
     s += rr(x, top, w, 104 if top == SW else 90, COL[k]); cx[i] = x + w / 2; x += w
 s += stack('narrow', 'right', x - 28, SW, 3)
-for i, p in enumerate((3, 14, 23)): s += g(S.person(p), f'translate({cx[0] - 150 + i * 75} {SW - 190})')
+for i, p in enumerate((3, 14, 23)): s += g(G.person(p), f'translate({cx[0] - 150 + i * 75} {SW - 190})')
 s += put('tree-big', cx[1] + 10, SW) + put('lamp-traditional-both', cx[1] - 30, SW)
 s += put('arrow-inbound-grey', cx[2], GY, 70) + put('cyclist-a-front', cx[2], GY)
 s += put('car-front-parked', cx[3], GY) + put('parking-stall-line-right', cx[3] + 80, GY, 80)
@@ -37,6 +39,6 @@ s += put('bus-front-shared-lane', cx[5], GY)
 s += put('planter-box', cx[6], SW) + put('lamp-modern-both', cx[6] + 40, SW)
 s += put('rail-tracks-dark', cx[7], GY, 85) + put('light-rail-front', cx[7], GY)
 s += put('transit-shelter-light-rail-left', cx[8], SW)
-s += put('bench-left', cx[9] - 30, SW) + g(S.person(19), f'translate({cx[9] - 10} {SW - 190})') + g(S.person(28), f'translate({cx[8] - 130} {SW - 190})')
+s += put('bench-left', cx[9] - 30, SW) + g(G.person(19), f'translate({cx[9] - 10} {SW - 190})') + g(G.person(28), f'translate({cx[8] - 130} {SW - 190})')
 G.write(G.OUT + '/preview/street-scene.svg', svg(W, H, s))
 print('preview written')
