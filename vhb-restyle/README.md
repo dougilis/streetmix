@@ -42,7 +42,7 @@ sprite sheets.
 
 `streetmix-current-vhb-sketch.html` is that same app packed into one file: open it in a browser and it runs with no server. It is the app's own built JavaScript and CSS with its network calls replayed from a recording, so every edit works but nothing is saved, and sign-in, sharing and the gallery do nothing. `tools/upstream_capture.js` and `tools/build_upstream_html.py` produce it.
 
-That screenshot is the real app, built and run locally from that branch. 154 illustrations are redrawn; 182 are
+That screenshot is the real app, built and run locally from that branch. 192 illustrations are redrawn, including all 38 palette thumbnails; 144 are
 still the original art (35 road markings on purpose, the rest not drawn yet). The full lists are in
 `packages/illustrations/VHB-SKETCH.md` on that branch. `tools/upstream_measure.js` and `tools/upstream_export.py`
 here are what produced them.
