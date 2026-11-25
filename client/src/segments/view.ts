@@ -309,29 +309,29 @@ function drawGroundPattern(
   let pattern
   switch (spriteId) {
     case 'ground--asphalt':
-      pattern = '#292b29'
+      pattern = '#6e7085'
       break
     case 'ground--asphalt-gray':
-      pattern = '#5c5e5f'
+      pattern = '#8c8ea3'
       break
     case 'ground--asphalt-red':
-      pattern = '#992025'
+      pattern = '#a8456a'
       break
     case 'ground--asphalt-green':
-      pattern = '#2e6550'
+      pattern = '#a9c487'
       break
     case 'ground--sand':
-      pattern = '#ecdbb1'
+      pattern = '#eaddbb'
       break
     case 'ground--wall':
-      pattern = '#cead80'
+      pattern = '#d9d7ce'
       break
     case 'ground--earth':
-      pattern = '#352d27'
+      pattern = '#5a5c73'
       break
     case 'ground--concrete':
     default:
-      pattern = '#d8d3cb'
+      pattern = '#f1efe7'
       break
   }
 
