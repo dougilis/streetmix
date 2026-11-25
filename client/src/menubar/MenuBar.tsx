@@ -2,9 +2,11 @@ import { useEffect, useRef } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import logo from 'url:../../images/logo_horizontal.svg'
+import vhbLogo from 'url:../../images/vhb-logo.svg'
 import logoCoastmix from 'url:~/src/plugins/coastmix/images/logo_horizontal_coastmix.svg'
 import bostonLogo from 'url:~/src/plugins/coastmix/images/boston-logo.svg'
 import { useSelector } from '../store/hooks.js'
+import { UNLOCK_ALL } from '../app/config.js'
 import AccessibleIcon from '../ui/AccessibleIcon.js'
 import { Icon } from '../ui/Icon.js'
 import { doSignIn } from '../users/authentication.js'
@@ -120,6 +122,16 @@ export function MenuBar({ onMenuDropdownClick }: MenuBarProps) {
     <nav className="menu-bar">
       <ul className="menu-bar-left" ref={menuBarLeftEl}>
         <li className="menu-bar-title">
+          {/* VHB edition: the VHB mark leads, with Streetmix credited beside it */}
+          <img
+            src={vhbLogo}
+            // eslint-disable-next-line formatjs/no-literal-string-in-jsx
+            alt="VHB"
+            className="menu-bar-vhb-logo"
+            draggable={false}
+          />
+          {/* eslint-disable-next-line formatjs/no-literal-string-in-jsx */}
+          <span className="menu-bar-built-on">built on</span>
           <img
             src={logoSrc}
             // eslint-disable-next-line formatjs/no-literal-string-in-jsx
@@ -156,7 +168,7 @@ export function MenuBar({ onMenuDropdownClick }: MenuBarProps) {
                 defaultMessage="Contact"
               />
             </MenuBarItem>
-            {!isSubscriber && (
+            {!isSubscriber && !UNLOCK_ALL && (
               <li>
                 <UpgradeButton />
               </li>

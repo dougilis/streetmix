@@ -3,6 +3,7 @@ import { useDrag } from 'react-dnd'
 
 import { useSelector } from '../store/hooks.js'
 import { images } from '../app/load_resources.js'
+import { UNLOCK_ALL } from '../app/config.js'
 import { Icon } from '../ui/Icon.js'
 import { Tooltip } from '../ui/Tooltip.js'
 import { EmptyDragPreview } from '../ui/dnd/EmptyDragPreview.js'
@@ -40,6 +41,7 @@ export function PaletteItem({ item }: PaletteItemProps) {
   let sublabel
 
   if (
+    !UNLOCK_ALL &&
     unlockCondition &&
     !(item.unlockWithFlag !== undefined && flags[item.unlockWithFlag]?.value)
   ) {

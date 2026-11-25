@@ -14,6 +14,11 @@ function parseBoolean(value: string | undefined): boolean {
 }
 
 export const ENV: string | undefined = process.env.NODE_ENV
+
+// VHB edition: every street element is available to everyone. Setting this to
+// `false` restores the sign-in and Streetmix+ locks on palette items and variants.
+export const UNLOCK_ALL: boolean = true
+
 export const STREETMIX_INSTANCE: string | undefined =
   process.env.STREETMIX_INSTANCE
 export const SPONSOR_BANNER: string | undefined = process.env.SPONSOR_BANNER

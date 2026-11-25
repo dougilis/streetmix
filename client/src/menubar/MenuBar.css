@@ -134,6 +134,21 @@
   }
 }
 
+.menu-bar-vhb-logo {
+  height: 26px;
+  position: relative;
+  top: -2px;
+}
+
+.menu-bar-built-on {
+  margin-inline: 0.75em 0.5em;
+  padding-inline-start: 0.75em;
+  border-inline-start: 1px solid var(--color-turquoise-900);
+  font-size: 0.8em;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
 .menu-carat-down {
   margin-inline: 0.25em -0.25em;
 }

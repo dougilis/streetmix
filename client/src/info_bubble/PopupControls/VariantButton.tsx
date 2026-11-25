@@ -1,6 +1,7 @@
 import { useIntl } from 'react-intl'
 
 import { useSelector } from '~/src/store/hooks.js'
+import { UNLOCK_ALL } from '~/src/app/config.js'
 import VARIANT_ICONS from '~/src/segments/variant_icons.yaml'
 import { Button } from '~/src/ui/Button.js'
 import { Icon, type IconNames } from '~/src/ui/Icon.js'
@@ -69,6 +70,7 @@ export function VariantButton(props: VariantButtonProps) {
   // is locked for a reason (e.g. must sign in, must be a subscriber)
   // If an "unlock flag" is set, enable the thing
   if (
+    !UNLOCK_ALL &&
     icon.unlockCondition !== undefined &&
     !(icon.unlockWithFlag !== undefined && flags[icon.unlockWithFlag]?.value)
   ) {

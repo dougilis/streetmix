@@ -12,6 +12,17 @@ exports[`MenusContainer > renders 1`] = `
         class="menu-bar-title"
       >
         <img
+          alt="VHB"
+          class="menu-bar-vhb-logo"
+          draggable="false"
+          src="test-file-stub"
+        />
+        <span
+          class="menu-bar-built-on"
+        >
+          built on
+        </span>
+        <img
           alt="Streetmix"
           class="menu-bar-logo"
           draggable="false"
@@ -45,19 +56,6 @@ exports[`MenusContainer > renders 1`] = `
             data-icon="chevron-down"
             size="14"
           />
-        </button>
-      </li>
-      <li>
-        <button
-          class="btn btn-tertiary menu-upgrade"
-          type="button"
-        >
-          <img
-            alt="Streetmix+"
-            class="menu-avatar-subscriber"
-            src="test-file-stub"
-          />
-          Get Streetmix+‎
         </button>
       </li>
     </ul>
