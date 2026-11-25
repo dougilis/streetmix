@@ -100,7 +100,8 @@ app.get('/assets/images/icons.svg', function (req, res) {
 })
 
 app.get('/assets/images/images.svg', function (req, res) {
-  res.sendFile(path.join(__dirname, '/node_modules/streetmix-illustrations/dist/images.svg'))
+  // VHB edition: sidewalk people come from the VHB sketch set (see vhb-restyle/)
+  res.sendFile(path.join(__dirname, '/public/images/vhb-people.svg'))
 })
 
 app.use(express.static(path.join(__dirname, '/public')))

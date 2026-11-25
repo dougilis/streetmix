@@ -32,6 +32,24 @@ So neither new iteration uses gradients inside sprites. B takes the printmaking 
 
 Sources: [Creative Bloq, illustration trends 2026](https://www.creativebloq.com/art/illustration/messy-meaningful-and-made-by-humans-the-biggest-illustration-trends-for-2026) · [Creative Bloq, graphic design trends 2026](https://www.creativebloq.com/design/graphic-design/texture-warmth-and-tactile-rebellion-the-big-graphic-design-trends-for-2026) · [Fireart, illustration trends](https://fireart.studio/blog/illustration-trends/) · [ManyPixels, icon design trends](https://www.manypixels.co/blog/post/the-key-trends-in-icon-design-in-2022) · [Made Good Designs, what's in and out](https://madegooddesigns.com/graphic-design-trends-2026/) · [Webflow, after Corporate Memphis](https://webflow.com/blog/after-corporate-memphis) · [GetIllustrations, styles to watch](https://getillustrations.com/blog/emerging-illustration-styles-to-watch-in-2026)
 
+## Implemented: the marker sketch set is now the app's artwork
+
+Open `vhb-streetmix-sketch.html` in a browser to see it. It is one self-contained file that draws a live, editable street from the sketch sheets, using the segment definitions in `assets/scripts/segments/info.js` and the same crop coordinates and placement maths as the app. Switch to "Original art" in the header to see the old sheets through the same code.
+
+What changed in the app itself:
+
+| File | Change |
+|---|---|
+| `public/images/tiles-1/2/3.png`, `sky-front.png`, `sky-rear.png` | Replaced with the sketch versions (same pixel sizes) |
+| `public/images/vhb-people.svg` | New: the 31 sketch figures as SVG symbols, in the format the loader expects |
+| `app.js` | `/assets/images/images.svg` now serves `vhb-people.svg` instead of the `streetmix-illustrations` package |
+| `assets/scripts/app/load_resources.js` | Tileset version bumped so browsers drop the cached sheets |
+| `assets/css/_variables.scss`, `_sky.scss` | Sky, ground, lower background and segment-label colours retuned for the sketch art |
+
+The originals are kept in `vhb-restyle/original/` and in git history.
+
+**Not verified:** the full app was not started (it needs MongoDB and a 2016-era Node toolchain), so the SCSS changes and the people swap are untested in the real server. The standalone page is the evidence that the sheets line up.
+
 ## What the app draws, and where it comes from
 
 | Graphic | Count | Source in the app |
@@ -91,7 +109,8 @@ The middle steps measure each sprite and nudge any that spill outside their foot
 
 ## Not done
 
-- **Nothing is wired into the app.** `public/images` is untouched and the app has not been run with the new sheets. Swapping them in is a copy of three PNGs plus the two sky files.
+- **The app itself has not been run** with the sketch art; see the section above.
+- **`streetmix-illustrations` may hold symbols besides the people.** The code in this repo only draws the people from it, but that package could not be opened here to confirm nothing else is lost by replacing it.
 - **People**: the live app takes its 31 figures from the external `streetmix-illustrations` package, which this session could not open. The new figures follow the widths in `segments/people.js` but their box size is an assumption.
 - **UI icons, favicon, "learn more" photos, UI colours and fonts** are inventoried above but not redrawn or changed.
 - **Colour values** were sampled from the brand book PDF. Check them against the Brand Toolkit before anything ships.

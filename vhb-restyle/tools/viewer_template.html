@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VHB Streetmix sketch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #272B67; --teal: #006B6E; --aqua: #00839B; --citron: #B4CC43; --berry: #8B1D41; --sky: #DDEEF2; --haze: #CFE6EB; --ground: #6E7085; --below: #F1EFE7; --white: #FFFFFF; --muted: #5E6190; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--below); font-size: 16px; line-height: 1.4; }
+  button, select { font: inherit; color: inherit; }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: var(--white); border-bottom: 2px solid var(--ink); flex-wrap: wrap; }
+  .mark { font-weight: 700; font-size: 22px; letter-spacing: -.01em; }
+  .mark span { font-weight: 400; color: var(--muted); margin-left: 8px; font-size: 16px; }
+  .spacer { flex: 1; }
+  .seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; background: var(--white); }
+  .seg button { border: 0; background: none; padding: 6px 16px; cursor: pointer; font-weight: 600; }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--white); }
+  .stage { position: relative; background: var(--sky); overflow-x: auto; overflow-y: hidden; }
+  .stage.original { background: rgb(169, 204, 219); }
+  .scene { position: relative; margin: 0 auto; }
+  canvas#street { display: block; }
+  .plate { position: absolute; left: 50%; top: 22px; transform: translateX(-50%); background: var(--white); border: 3px solid var(--ink); border-radius: 6px; padding: 4px 22px; font-weight: 700; font-size: 26px; letter-spacing: .01em; box-shadow: 4px -4px 0 var(--citron); white-space: nowrap; outline-offset: 4px; }
+  .labels { position: absolute; left: 0; height: 64px; pointer-events: none; }
+  .labels button { position: absolute; top: 0; height: 64px; border: 0; border-left: 1px solid rgba(255,255,255,.55); background: none; color: var(--white); cursor: pointer; pointer-events: auto; padding: 6px 2px 0; text-align: center; overflow: hidden; font-size: 13px; line-height: 1.15; }
+  .labels button b { display: block; font-size: 15px; }
+  .labels button:hover, .labels button.sel { background: rgba(255,255,255,.16); }
+  .labels button.sel { box-shadow: inset 0 -4px 0 var(--citron); }
+  .hit { position: absolute; top: 0; cursor: pointer; border: 0; background: none; padding: 0; }
+  .hit:hover { background: rgba(255,255,255,.22); }
+  .hit.sel { background: rgba(255,255,255,.3); outline: 2px dashed var(--ink); outline-offset: -2px; }
+  main { padding: 16px 20px 40px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; max-width: 1400px; margin: 0 auto; }
+  section { background: var(--white); border: 2px solid var(--ink); border-radius: 10px; padding: 12px 16px 14px; }
+  h2 { margin: 0 0 8px; font-size: 17px; font-weight: 700; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .group > span { color: var(--muted); font-size: 14px; margin-right: 2px; }
+  .chip { border: 2px solid var(--ink); border-radius: 999px; background: var(--white); padding: 3px 12px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--white); }
+  .chip.danger { border-color: var(--berry); color: var(--berry); }
+  .chip:disabled { opacity: .35; cursor: default; }
+  .palette { display: flex; gap: 8px; overflow-x: auto; padding: 4px 2px 8px; }
+  .palette button { flex: none; border: 2px solid var(--ink); border-radius: 8px; background: var(--sky); padding: 0 0 4px; cursor: pointer; font-size: 13px; width: 124px; overflow: hidden; }
+  .palette button:hover { box-shadow: 3px -3px 0 var(--citron); }
+  .palette canvas { display: block; margin: 0 auto 2px; }
+  .note { color: var(--muted); font-size: 14px; margin: 0; max-width: 78ch; }
+  select { border: 2px solid var(--ink); border-radius: 6px; background: var(--white); padding: 3px 8px; }
+  :focus-visible { outline: 3px solid var(--aqua); outline-offset: 2px; }
+  @media (max-width: 640px) { .plate { font-size: 19px; } main { padding: 12px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">VHB Streetmix<span>marker sketch edition</span></div>
+  <div class="spacer"></div>
+  <div class="seg" role="group" aria-label="Artwork">
+    <button id="art-sketch" aria-pressed="true">VHB sketch</button>
+    <button id="art-original" aria-pressed="false">Original art</button>
+  </div>
+</header>
+
+<div class="stage" id="stage">
+  <div class="scene" id="scene">
+    <canvas id="street"></canvas>
+    <div class="plate" id="plate" contenteditable="true" spellcheck="false" aria-label="Street name">Unnamed St</div>
+    <div id="hits"></div>
+    <div class="labels" id="labels"></div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2 id="sel-title">Pick a segment on the street</h2>
+    <div class="row" id="sel-controls"></div>
+  </section>
+  <section>
+    <h2>Add to street</h2>
+    <div class="palette" id="palette"></div>
+  </section>
+  <section>
+    <h2>Buildings</h2>
+    <div class="row" id="buildings"></div>
+  </section>
+  <p class="note" id="foot"></p>
+</main>
+
+<script>
+const SEGMENT_INFO = __SEGINFO__;
+const ART = __ART__;
+const PEOPLE = __PEOPLE__;
+
+// ---- constants copied from assets/scripts/segments/view.js, buildings.js, people.js
+const TILE = 12, PPP = 2, CORR = [null, 0, -84, -162], BASELINE = 445, SEG_Y = 265, PALETTE_Y = 20;
+const PERSON_TYPES = 31;
+const PERSON_CAN_GO_FIRST = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1];
+const PERSON_WIDTH = [2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,3,3,3,3,1,1,3,4,2,3,2,3,4,3,2];
+const BUILDING_VARIANTS = ['waterfront', 'grass', 'fence', 'parking-lot', 'residential', 'narrow', 'wide'];
+const BUILDING_NAMES = ['Waterfront', 'Grass', 'Empty lot', 'Parking lot', 'Home', 'Narrow building', 'Wide building'];
+const BW = 445, OVERLAP = 25;
+
+for (const t in SEGMENT_INFO) for (const v in SEGMENT_INFO[t].details) {
+  const g = SEGMENT_INFO[t].details[v].graphics;
+  for (const k of ['repeat', 'left', 'right', 'center']) if (g[k] && !Array.isArray(g[k])) g[k] = [g[k]];
+}
+
+class Rand { constructor (s) { this.s = s } rand () { const x = 134775813 * this.s + 1; return (this.s = x % 0x100000000) / 0x100000000 } }
+
+let art = 'sketch';
+const IMG = { sketch: {}, original: {} }, PIMG = [];
+function load (src) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); }
+
+function tile (ctx, ts, sx, sy, sw, sh, dx, dy, dw, dh) {
+  if (!sw || !sh || !dw || !dh || sw <= 0 || sh <= 0 || dw <= 0 || dh <= 0) return;
+  sx += CORR[ts] * 12;
+  if (sx < 0) { dw += sx; sx = 0; }
+  ctx.drawImage(IMG[art][ts], sx * PPP, sy * PPP, sw * PPP, sh * PPP, dx, dy, dw, dh);
+}
+
+function dims (vi, segW, m) {
+  const sw = segW / TILE / m, center = sw / 2; let left = center, right = center;
+  const g = vi.graphics, grow = (l, r) => { if (l < left) left = l; if (r > right) right = r; };
+  for (const s of g.center || []) grow(center - s.width / 2 + (s.offsetX || 0), center + s.width / 2 + (s.offsetX || 0));
+  for (const s of g.left || []) grow(s.offsetX || 0, s.width + (s.offsetX || 0));
+  for (const s of g.right || []) grow(sw - (s.offsetX || 0) - s.width, sw - (s.offsetX || 0));
+  if (g.repeat && g.repeat[0]) grow(center - sw / 2, center + sw / 2);
+  return { left, right, center };
+}
+
+function drawPeople (ctx, width, offL, offT, seed, m, density) {
+  if (density === 'empty' || art !== 'sketch') return;
+  const [wc, wr] = density === 'sparse' ? [60, 100] : density === 'normal' ? [18, 60] : [18, 18];
+  const r = new Rand(seed + 16); const people = []; let pw = 0, last = 0, lastW = 0, n = 0;
+  while (!n || pw < width - 40) {
+    const p = { left: pw };
+    do { p.type = Math.floor(r.rand() * PERSON_TYPES); } while (p.type === last || (n === 0 && !PERSON_CAN_GO_FIRST[p.type]));
+    last = p.type; lastW = wc + PERSON_WIDTH[p.type] * 12 - 24 + r.rand() * wr; pw += lastW; people.push(p); n++;
+  }
+  pw -= lastW;
+  let start = (width - pw) / 2; const fc = (4 - PERSON_WIDTH[people[0].type]) * 12 / 2;
+  if (people.length === 1) start += fc; else start += (fc + (4 - PERSON_WIDTH[people[people.length - 1].type]) * 12 / 2) / 2;
+  for (const p of people) ctx.drawImage(PIMG[p.type], offL + (p.left - 30 - (4 - PERSON_WIDTH[p.type]) * 6 + start) * m, offT + 37 * m, 60 * m, 96 * m);
+}
+
+function drawSegment (ctx, type, vs, segW, offL, offT, seed, m) {
+  const vi = SEGMENT_INFO[type].details[vs], d = dims(vi, segW, m), left = d.left, center = d.center, g = vi.graphics;
+  for (const s of g.repeat || []) {
+    let w = s.width * TILE * m; const count = Math.floor(segW / w + 1), startX = left < 0 ? -left * TILE : 0;
+    for (let i = 0; i < count; i++) {
+      if (i === count - 1) w = segW - (count - 1) * w;
+      tile(ctx, s.tileset, s.x * TILE, (s.y || 0) * TILE, w, s.height * TILE, offL + (startX + i * s.width * TILE) * m, offT + m * TILE * (s.offsetY || 0), w, s.height * TILE * m);
+    }
+  }
+  for (const s of g.left || []) tile(ctx, s.tileset, s.x * TILE, (s.y || 0) * TILE, s.width * TILE, s.height * TILE, offL + (-left + (s.offsetX || 0)) * TILE * m, offT + m * TILE * (s.offsetY || 0), s.width * TILE * m, s.height * TILE * m);
+  for (const s of g.right || []) tile(ctx, s.tileset, s.x * TILE, (s.y || 0) * TILE, s.width * TILE, s.height * TILE, offL + (-left + segW / TILE / m - s.width - (s.offsetX || 0)) * TILE * m, offT + m * TILE * (s.offsetY || 0), s.width * TILE * m, s.height * TILE * m);
+  for (const s of g.center || []) tile(ctx, s.tileset, (s.x || 0) * TILE, (s.y || 0) * TILE, s.width * TILE, s.height * TILE, offL + (center - s.width / 2 - left - (s.offsetX || 0)) * TILE * m, offT + m * TILE * (s.offsetY || 0), s.width * TILE * m, s.height * TILE * m);
+  if (type === 'sidewalk') drawPeople(ctx, segW / m, offL - left * TILE * m, offT, seed, m, vs);
+}
+
+function buildingAttr (variant, left, floors) {
+  const a = { variant, floored: ['narrow', 'wide', 'residential'].includes(variant) };
+  if (variant === 'narrow') Object.assign(a, { width: 216, frw: 216, vc: 1, ts: 2, fh: 10, rh: 2, mh: 14, tx: left ? 1529 : 1741, ty: 575 });
+  if (variant === 'wide') Object.assign(a, { width: 396, frw: 396, vc: 1, ts: 3, fh: 10, rh: 2, mh: 14, tx: left ? 1956 : 2351, ty: left ? 528 : 527 });
+  if (variant === 'residential') Object.assign(a, { width: 396, frw: 240, vc: 0, fh: 10, rh: 6, mh: 24.5, ts: left ? 3 : 2, tx: left ? 2542 : 1594, ty: left ? 941 : 1176 });
+  a.height = a.floored ? (a.rh + a.fh * (floors - 1) + a.mh) * TILE + 45 : { waterfront: 144, 'parking-lot': 336, fence: 144, grass: 72 }[variant];
+  a.floors = floors; return a;
+}
+
+function drawBuilding (ctx, variant, floors, left, totalW, offL, offT) {
+  const a = buildingAttr(variant, left, floors); offT -= 45;
+  if (!a.floored) {
+    let ts = 1, x, y = 0, width = 48, height, offY, shift, firstX, lastX;
+    if (variant === 'fence') { x = left ? 672 : 612; height = 108; offY = 47; shift = left ? (totalW % width) - 121 : 25; }
+    if (variant === 'grass') { x = 552; height = 180; offY = -25; shift = left ? (totalW % width) - 121 : 25; }
+    if (variant === 'parking-lot') { ts = 3; width = 216; height = 288; offY = 48; if (left) { shift = (totalW % width) - 2 * width - 25; y = 310; x = 2759; lastX = 2975; } else { shift = 25; y = 12; x = 2975; firstX = 2759; } }
+    if (variant === 'waterfront') { width = 120; height = 96; offY = 93; if (left) { shift = (totalW % width) - 2 * width - 25; y = 120; x = 0; lastX = 120; } else { shift = 25; y = 228; x = 120; firstX = 0; } }
+    const count = Math.floor(totalW / width) + 2;
+    for (let i = 0; i < count; i++) {
+      const cx = (i === 0 && firstX !== undefined) ? firstX : (i === count - 1 && lastX !== undefined) ? lastX : x;
+      tile(ctx, ts, cx, y, width, height, offL + shift + i * width, offT + offY, width, height);
+    }
+    return;
+  }
+  const lp = left ? totalW - a.width - 2 : 0, fc = left ? 0 : a.width - a.frw, r = new Rand(0), base = a.ty - 240 + 120 * a.vc;
+  tile(ctx, a.ts, a.tx, base, a.width, a.mh * TILE + TILE, offL + lp, offT + a.height - a.mh * TILE, a.width, a.mh * TILE + TILE);
+  for (let i = 1; i < floors; i++) {
+    const v = a.vc === 0 ? 0 : Math.floor(r.rand() * a.vc) + 1;
+    tile(ctx, a.ts, a.tx + fc, base - a.fh * TILE * v, a.frw, a.fh * TILE, offL + lp + fc, offT + a.height - (a.mh + a.fh * i) * TILE, a.frw, a.fh * TILE);
+  }
+  tile(ctx, a.ts, a.tx + fc, base - (a.fh * TILE * a.vc + a.rh * TILE), a.frw, a.rh * TILE, offL + lp + fc, offT + a.height - (a.mh + a.fh * (floors - 1) + a.rh) * TILE, a.frw, a.rh * TILE);
+}
+
+// ---- the street (the app's default right-hand-traffic street)
+const street = {
+  left: { variant: 'narrow', floors: 4 }, right: { variant: 'wide', floors: 3 },
+  segments: [
+    ['sidewalk', 'dense', 6], ['sidewalk-tree', 'big', 2], ['transit-shelter', 'left|street-level', 9], ['sidewalk-lamp', 'right|modern', 2],
+    ['bus-lane', 'inbound|shared', 12], ['drive-lane', 'inbound|car', 9], ['divider', 'bush', 3], ['turn-lane', 'outbound|left-straight', 10],
+    ['parking-lane', 'outbound|right', 7], ['divider', 'planter-box', 4], ['bike-lane', 'outbound|colored', 6], ['sidewalk-lamp', 'left|modern', 2],
+    ['sidewalk-tree', 'big', 2], ['sidewalk', 'normal', 6]
+  ].map(([type, variant, width], i) => ({ type, variant, width, seed: 35 + i * 7919 }))
+};
+let selected = -1;
+
+const stage = document.getElementById('stage'), scene = document.getElementById('scene'), canvas = document.getElementById('street');
+const hitsEl = document.getElementById('hits'), labelsEl = document.getElementById('labels');
+const THEME = { sketch: { dirt: '#6E7085', below: '#F1EFE7', haze: '#CFE6EB', front: .8 }, original: { dirt: 'rgb(53,45,39)', below: 'rgb(216,211,203)', haze: 'rgb(165,196,209)', front: .5 } };
+
+function segName (s) { const i = SEGMENT_INFO[s.type]; return i.details[s.variant].name || i.name; }
+
+function render () {
+  const th = THEME[art], streetW = street.segments.reduce((a, s) => a + s.width * TILE, 0);
+  const la = buildingAttr(street.left.variant, true, street.left.floors), ra = buildingAttr(street.right.variant, false, street.right.floors);
+  const Y0 = Math.max(170, Math.max(la.height, ra.height) - BASELINE + 40), W = (BW - OVERLAP) * 2 + streetW, H = Y0 + BASELINE + 70, X0 = BW - OVERLAP;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = W * dpr; canvas.height = H * dpr; canvas.style.width = W + 'px'; canvas.style.height = H + 'px'; scene.style.width = W + 'px';
+  stage.classList.toggle('original', art === 'original');
+  const ctx = canvas.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+  // sky: two tiling cloud bands and a haze strip (placement approximates the app's CSS)
+  const rear = IMG[art].skyRear, front = IMG[art].skyFront, fy = Y0 + 20;
+  for (let x = 0; x < W; x += 250) ctx.drawImage(rear, x, fy - 120, 250, 120);
+  ctx.globalAlpha = th.front;
+  for (let x = 0; x < W; x += 250) ctx.drawImage(front, x, fy, 250, 280);
+  ctx.fillStyle = th.haze; ctx.fillRect(0, fy + 280, W, 50); ctx.globalAlpha = 1;
+  // ground
+  ctx.fillStyle = th.dirt; ctx.fillRect(0, Y0 + 400, W, 45); ctx.fillStyle = th.below; ctx.fillRect(0, Y0 + BASELINE, W, 70);
+  ctx.fillStyle = th.dirt; ctx.fillRect(X0, Y0 + BASELINE, streetW, 70);
+  // buildings (their canvases overlap the street edge by 25px, as in the app)
+  drawBuilding(ctx, la.variant, la.floors, true, BW, 0, Y0 + BASELINE - la.height);
+  drawBuilding(ctx, ra.variant, ra.floors, false, BW, X0 + streetW - OVERLAP, Y0 + BASELINE - ra.height);
+  // segments, low zIndex first
+  let x = X0; const pos = [];
+  street.segments.forEach(s => { pos.push(x); x += s.width * TILE; });
+  street.segments.map((s, i) => i).sort((a, b) => (SEGMENT_INFO[street.segments[a].type].zIndex - SEGMENT_INFO[street.segments[b].type].zIndex) || a - b).forEach(i => {
+    const s = street.segments[i], w = s.width * TILE, d = dims(SEGMENT_INFO[s.type].details[s.variant], w, 1);
+    drawSegment(ctx, s.type, s.variant, w, pos[i] + d.left * TILE, Y0 + SEG_Y, s.seed, 1);
+  });
+  // overlays
+  hitsEl.innerHTML = ''; labelsEl.innerHTML = ''; labelsEl.style.top = (Y0 + BASELINE) + 'px'; labelsEl.style.width = W + 'px';
+  street.segments.forEach((s, i) => {
+    const w = s.width * TILE, hit = document.createElement('button');
+    hit.className = 'hit' + (i === selected ? ' sel' : ''); hit.style.cssText = `left:${pos[i]}px;width:${w}px;height:${Y0 + BASELINE}px`; hit.setAttribute('aria-label', 'Select ' + segName(s)); hit.onclick = () => select(i);
+    hitsEl.appendChild(hit);
+    const lab = document.createElement('button'); lab.className = i === selected ? 'sel' : ''; lab.style.cssText = `left:${pos[i]}px;width:${w}px`; lab.innerHTML = `<b>${s.width}′</b>${w >= 60 ? segName(s) : ''}`; lab.onclick = () => select(i);
+    labelsEl.appendChild(lab);
+  });
+  document.getElementById('foot').textContent = `${streetW / TILE}′ of street between the buildings. ` + (art === 'sketch' ? 'Drawn from the VHB sketch sheets using the same crop coordinates and placement maths as the app.' : 'Original Streetmix sheets, same coordinates. Sidewalk people are hidden in this mode because the original figures live in a package this file does not include.');
+}
+
+function select (i) { selected = i; render(); controls(); }
+
+function chip (label, on, fn, cls) { const b = document.createElement('button'); b.className = 'chip' + (cls ? ' ' + cls : ''); b.textContent = label; if (on !== null) b.setAttribute('aria-pressed', on); b.onclick = fn; return b; }
+function group (label, kids) { const g = document.createElement('div'); g.className = 'group'; if (label) { const s = document.createElement('span'); s.textContent = label; g.appendChild(s); } kids.forEach(k => g.appendChild(k)); return g; }
+const pretty = s => s.replace(/-/g, ' ');
+
+function controls () {
+  const box = document.getElementById('sel-controls'), title = document.getElementById('sel-title'); box.innerHTML = '';
+  const s = street.segments[selected];
+  if (!s) { title.textContent = 'Pick a segment on the street'; return; }
+  title.textContent = segName(s);
+  const info = SEGMENT_INFO[s.type], keys = Object.keys(info.details), parts = s.variant.split('|');
+  info.variants.forEach((axis, ai) => {
+    if (!axis) return;
+    const opts = [...new Set(keys.map(k => k.split('|')[ai]))];
+    if (opts.length < 2) return;
+    box.appendChild(group(pretty(axis), opts.map(o => chip(pretty(o), o === parts[ai], () => {
+      const want = parts.slice(); want[ai] = o; const k = want.join('|');
+      s.variant = info.details[k] ? k : keys.find(c => c.split('|')[ai] === o); render(); controls();
+    }))));
+  });
+  box.appendChild(group('width', [chip('−', null, () => { s.width = Math.max(1, s.width - 1); render(); controls(); }), chip(s.width + '′', null, () => {}), chip('+', null, () => { s.width += 1; render(); controls(); })]));
+  const mv = d => () => { const j = selected + d; if (j < 0 || j >= street.segments.length) return; street.segments.splice(j, 0, street.segments.splice(selected, 1)[0]); selected = j; render(); controls(); };
+  box.appendChild(group('move', [chip('← left', null, mv(-1)), chip('right →', null, mv(1))]));
+  box.appendChild(group('', [chip('Remove segment', null, () => { street.segments.splice(selected, 1); selected = -1; render(); controls(); }, 'danger')]));
+}
+
+function palette () {
+  const el = document.getElementById('palette'); el.innerHTML = '';
+  for (const type in SEGMENT_INFO) {
+    const info = SEGMENT_INFO[type]; if (info.secret) continue;
+    const vs = Object.keys(info.details)[0], m = .5, PH = 120, w = info.defaultWidth * TILE, d = dims(info.details[vs], w * m, m), cw = Math.min(116, Math.ceil((d.right - d.left) * TILE * m)), dpr = window.devicePixelRatio || 1;
+    const b = document.createElement('button'), c = document.createElement('canvas'); c.width = cw * dpr; c.height = PH * dpr; c.style.width = cw + 'px'; c.style.height = PH + 'px';
+    const ctx = c.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawSegment(ctx, type, vs, w * m, 0, PH - m * 180, 35, m);
+    b.appendChild(c); b.appendChild(document.createTextNode(info.name)); b.title = 'Add ' + info.name;
+    b.onclick = () => { const at = selected >= 0 ? selected + 1 : street.segments.length; street.segments.splice(at, 0, { type, variant: vs, width: info.defaultWidth, seed: 1 + Math.floor(Math.random() * 1e6) }); select(at); };
+    el.appendChild(b);
+  }
+}
+
+function buildings () {
+  const el = document.getElementById('buildings'); el.innerHTML = '';
+  for (const side of ['left', 'right']) {
+    const b = street[side], sel = document.createElement('select'); sel.setAttribute('aria-label', side + ' side');
+    BUILDING_VARIANTS.forEach((v, i) => { const o = document.createElement('option'); o.value = v; o.textContent = BUILDING_NAMES[i]; o.selected = v === b.variant; sel.appendChild(o); });
+    sel.onchange = () => { b.variant = sel.value; render(); buildings(); };
+    const floored = ['narrow', 'wide', 'residential'].includes(b.variant);
+    const kids = [sel];
+    if (floored) kids.push(chip('−', null, () => { b.floors = Math.max(1, b.floors - 1); render(); buildings(); }), chip(b.floors + (b.floors === 1 ? ' floor' : ' floors'), null, () => {}), chip('+', null, () => { b.floors = Math.min(20, b.floors + 1); render(); buildings(); }));
+    el.appendChild(group(side + ' side', kids));
+  }
+}
+
+function setArt (a) {
+  art = a; document.getElementById('art-sketch').setAttribute('aria-pressed', a === 'sketch'); document.getElementById('art-original').setAttribute('aria-pressed', a === 'original');
+  render(); palette();
+}
+document.getElementById('art-sketch').onclick = () => setArt('sketch');
+document.getElementById('art-original').onclick = () => setArt('original');
+window.addEventListener('resize', render);
+
+(async () => {
+  for (const a of ['sketch', 'original']) for (const k of ['1', '2', '3', 'skyFront', 'skyRear']) IMG[a][k] = await load(ART[a][k]);
+  for (const p of PEOPLE) PIMG.push(await load(p));
+  render(); palette(); buildings(); controls();
+  stage.scrollLeft = (stage.scrollWidth - stage.clientWidth) / 2;
+})();
+</script>
+</body>
+</html>

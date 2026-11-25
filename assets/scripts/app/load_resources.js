@@ -8,7 +8,7 @@
 
 // Image tileset loading
 // TODO: Deprecate in favor of inlined SVGs
-const TILESET_IMAGE_VERSION = 55
+const TILESET_IMAGE_VERSION = 56
 const IMAGES_TO_BE_LOADED = [
   '/images/tiles-1.png',
   '/images/tiles-2.png',
